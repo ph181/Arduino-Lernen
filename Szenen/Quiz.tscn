@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3hmf1pufvubc"]
+
+[ext_resource type="Texture2D" uid="uid://qup58v5bfn1k" path="res://Grafiken/close.png" id="1_u2fkg"]
+
+[sub_resource type="GDScript" id="GDScript_22p42"]
+script/source = "extends Node
+
+func _on_close_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.is_pressed() and event.button_index == 1:
+			get_tree().change_scene_to_file(\"res://Szenen/Klassenzimmer.tscn\") # 
+
+
+func _on_close_mouse_entered():
+	$Close.scale *= 1.2
+
+
+func _on_close_mouse_exited():
+	$Close.scale /= 1.2
+"
+
+[node name="Quiz" type="Node2D"]
+script = SubResource("GDScript_22p42")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 383.0
+offset_top = 283.0
+offset_right = 423.0
+offset_bottom = 306.0
+text = "in Arbeit"
+
+[node name="Close" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 1088.0
+offset_top = 11.0
+offset_right = 1136.0
+offset_bottom = 59.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("1_u2fkg")
+
+[connection signal="gui_input" from="Close" to="." method="_on_close_gui_input"]
+[connection signal="mouse_entered" from="Close" to="." method="_on_close_mouse_entered"]
+[connection signal="mouse_exited" from="Close" to="." method="_on_close_mouse_exited"]
