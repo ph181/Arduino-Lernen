@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/kranky/Kranky.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sprite/aufgabe.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=22]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 17
+font_data = ExtResource( 1 )
+
+[node name="drei" type="Sprite"]
+visible = false
+position = Vector2( -0.000411988, 0 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="title" type="Label" parent="."]
+margin_left = 5.00022
+margin_right = 548.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 22 )
+text = "Fortgeschritten"
+align = 1
+
+[node name="text" type="Label" parent="."]
+margin_left = 18.0
+margin_top = 75.0
+margin_right = 572.0
+margin_bottom = 372.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 23 )
+text = "Programmiere eine Ampel mit einer roten, grünen und gelben LED
+"
+autowrap = true

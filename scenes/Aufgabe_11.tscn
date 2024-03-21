@@ -1,0 +1,553 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://scenes/ButtonBack.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/plain.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Base.gd" type="Script" id=3]
+[ext_resource path="res://fonts/kranky/Kranky.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://sprite/buttonstyle.png" type="Texture" id=5]
+[ext_resource path="res://scripts/HelpBase.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Exer.gd" type="Script" id=7]
+[ext_resource path="res://sprite/standard.png" type="Texture" id=8]
+[ext_resource path="res://sprite/close.png" type="Texture" id=9]
+[ext_resource path="res://sprite/aufgabe.png" type="Texture" id=10]
+[ext_resource path="res://sprite/exer.png" type="Texture" id=12]
+[ext_resource path="res://sprite/try.png" type="Texture" id=13]
+[ext_resource path="res://sprite/info.png" type="Texture" id=14]
+[ext_resource path="res://scenes/ButtonBackZwo.tscn" type="PackedScene" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 17
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://fonts/VeraMono.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 70
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 18
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 70
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 17
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 70
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 70
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 38
+font_data = ExtResource( 4 )
+
+[node name="Aufgabe_11" type="Node2D" groups=["saver"]]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+centered = false
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Frame" type="Node2D" parent="."]
+position = Vector2( 102, 217 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="try" type="Sprite" parent="Frame"]
+texture = ExtResource( 13 )
+
+[node name="try" type="Label" parent="Frame/try"]
+margin_left = -119.0
+margin_top = -113.0
+margin_right = 119.0
+margin_bottom = 106.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "probieren"
+align = 1
+valign = 2
+
+[node name="Try" type="Node2D" parent="Frame"]
+visible = false
+position = Vector2( -145.714, -310 )
+scale = Vector2( 1.42857, 1.42857 )
+z_index = 1
+script = ExtResource( 7 )
+
+[node name="Aufgabe" type="Sprite" parent="Frame/Try"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe"]
+margin_left = 5.0
+margin_right = 548.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ausprobieren!"
+align = 1
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe"]
+margin_left = 18.0
+margin_top = 75.0
+margin_right = 580.0
+margin_bottom = 324.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Was würde diese Schleife machen?"
+autowrap = true
+
+[node name="Label" type="Label" parent="Frame/Try/Aufgabe"]
+margin_left = 162.0
+margin_top = 112.0
+margin_right = 502.0
+margin_bottom = 209.0
+rect_pivot_offset = Vector2( 204, 45 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "for (int f=100; f<1000; f = f+3) {
+tone(11,f);
+delay(60);
+}"
+
+[node name="Buttonnext" type="Node2D" parent="Frame/Try/Aufgabe"]
+position = Vector2( 511, 371 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame/Try/Aufgabe/Buttonnext"]
+texture = ExtResource( 5 )
+
+[node name="next" type="Label" parent="Frame/Try/Aufgabe/Buttonnext/ButtonSprite"]
+margin_left = -185.0
+margin_top = -35.0
+margin_right = 195.0
+margin_bottom = 29.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 6 )
+text = "weiter"
+align = 1
+
+[node name="zwei" type="Node2D" parent="Frame/Try/Aufgabe"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Frame/Try/Aufgabe/zwei"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Label" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+margin_left = 19.0
+margin_top = 5.0
+margin_right = 525.0
+margin_bottom = 54.0
+rect_rotation = 0.0643943
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Tatütata"
+align = 1
+
+[node name="Label2" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+margin_left = 22.0
+margin_top = 70.0
+margin_right = 584.0
+margin_bottom = 338.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Seit 2016 hat die deutsche Polizei eine sogenannte Yelp-Sirene mit einem auf- und abschwellenden Heulton. Programmeire so eine Sirene. Dazu brauchst du zwei for-Schleifen."
+autowrap = true
+
+[node name="ButtonBack" parent="Frame/Try/Aufgabe/zwei" instance=ExtResource( 15 )]
+
+[node name="Buttonnext2" type="Node2D" parent="Frame/Try/Aufgabe/zwei"]
+position = Vector2( 511, 371 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame/Try/Aufgabe/zwei/Buttonnext2"]
+texture = ExtResource( 5 )
+
+[node name="next2" type="Label" parent="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite"]
+margin_left = -185.0
+margin_top = -35.0
+margin_right = 195.0
+margin_bottom = 29.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 9 )
+text = "weiter"
+align = 1
+
+[node name="drei" type="Sprite" parent="Frame/Try/Aufgabe/zwei"]
+visible = false
+position = Vector2( -0.000411988, 0 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe/zwei/drei"]
+margin_left = 5.00022
+margin_right = 548.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Lauflicht"
+align = 1
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe/zwei/drei"]
+margin_left = 18.0
+margin_top = 75.0
+margin_right = 572.0
+margin_bottom = 372.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Schließe fünf LEDs an die Pins 9 bis 13 an und programmeire ein Lauflicht. Erst blitzt die LED an Pin 9, dann die an 10, dann an 11 und so weiter.
+"
+autowrap = true
+
+[node name="ButtonBack" parent="Frame/Try/Aufgabe/zwei/drei" instance=ExtResource( 15 )]
+
+[node name="ButtonClose" type="Node2D" parent="Frame/Try"]
+position = Vector2( 574, 29 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame/Try/ButtonClose"]
+texture = ExtResource( 9 )
+
+[node name="Buttonlabel" type="Label" parent="Frame/Try/ButtonClose/ButtonSprite"]
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 50.0
+margin_bottom = 43.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 12 )
+text = "X"
+align = 1
+
+[node name="Frame2" type="Node2D" parent="."]
+position = Vector2( 290, 217 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="exer" type="Sprite" parent="Frame2"]
+texture = ExtResource( 12 )
+
+[node name="exer" type="Label" parent="Frame2/exer"]
+margin_left = -117.0
+margin_top = -111.0
+margin_right = 121.0
+margin_bottom = 107.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "prüfen"
+align = 1
+valign = 2
+
+[node name="Exer" type="Node2D" parent="Frame2"]
+visible = false
+position = Vector2( -414.286, -310 )
+scale = Vector2( 1.42857, 1.42857 )
+z_index = 1
+script = ExtResource( 7 )
+
+[node name="Aufgabe" type="Sprite" parent="Frame2/Exer"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="title" type="Label" parent="Frame2/Exer/Aufgabe"]
+margin_left = 5.0
+margin_right = 548.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Üben mit der for-Schleife"
+align = 1
+
+[node name="text" type="Label" parent="Frame2/Exer/Aufgabe"]
+margin_left = 16.0002
+margin_top = 76.0001
+margin_right = 578.0
+margin_bottom = 325.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Was macht das Beispielprogramm? Was ändert sich, wenn du im ersten Parameter n = 5 schreibst? Was verändert sich, wenn du dann als zweiten Parameter n<50 verwendest? Was geschieht, wenn der dritte Parameter n=n+1 ist?"
+autowrap = true
+
+[node name="Label" type="Label" parent="Frame2/Exer/Aufgabe"]
+margin_left = 141.0
+margin_top = 185.0
+margin_right = 470.0
+margin_bottom = 358.0
+rect_pivot_offset = Vector2( 204, 45 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "void setup(){
+Serial.begin(9600);
+for(int n=0; n<30; n=n+1){
+Serial.println(“Hallo“);
+Serial.println(n);
+}
+}
+void loop(){}"
+autowrap = true
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Exer"]
+position = Vector2( 574, 29 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame2/Exer/ButtonClose"]
+texture = ExtResource( 9 )
+
+[node name="Buttonlabel" type="Label" parent="Frame2/Exer/ButtonClose/ButtonSprite"]
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 50.0
+margin_bottom = 43.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 12 )
+text = "X"
+align = 1
+
+[node name="ButtonHelp1" type="Node2D" parent="Frame2/Exer"]
+visible = false
+position = Vector2( 298, 373 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame2/Exer/ButtonHelp1"]
+texture = ExtResource( 5 )
+
+[node name="Buttonhelp" type="Label" parent="Frame2/Exer/ButtonHelp1/ButtonSprite"]
+margin_left = -185.0
+margin_top = -35.0
+margin_right = 195.0
+margin_bottom = 29.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 13 )
+text = " Hilfe 1"
+align = 1
+
+[node name="Help1" type="Node2D" parent="Frame2/Exer"]
+visible = false
+position = Vector2( 2.28882e-05, -4.57764e-05 )
+z_index = 1
+
+[node name="Aufgabe" type="Sprite" parent="Frame2/Exer/Help1"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Exer/Help1"]
+position = Vector2( 574, 29 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame2/Exer/Help1/ButtonClose"]
+texture = ExtResource( 9 )
+
+[node name="Buttonhelpclose" type="Label" parent="Frame2/Exer/Help1/ButtonClose/ButtonSprite"]
+margin_left = -45.0
+margin_top = -47.5
+margin_right = 50.0
+margin_bottom = 40.5
+mouse_filter = 1
+custom_fonts/font = SubResource( 12 )
+text = "X"
+align = 1
+
+[node name="Frame3" type="Node2D" parent="."]
+position = Vector2( 490, 217 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="info" type="Sprite" parent="Frame3"]
+texture = ExtResource( 14 )
+
+[node name="info" type="Label" parent="Frame3/info"]
+margin_left = -121.0
+margin_top = -116.0
+margin_right = 122.0
+margin_bottom = 113.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "lesen"
+align = 1
+valign = 2
+
+[node name="Info" type="Node2D" parent="Frame3"]
+visible = false
+position = Vector2( -700, -310 )
+scale = Vector2( 1.42857, 1.42857 )
+z_index = 1
+script = ExtResource( 7 )
+
+[node name="Aufgabe" type="Sprite" parent="Frame3/Info"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="title" type="Label" parent="Frame3/Info/Aufgabe"]
+margin_left = 5.0
+margin_right = 548.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "for-Schleife"
+align = 1
+
+[node name="text" type="Label" parent="Frame3/Info/Aufgabe"]
+margin_left = 18.0
+margin_top = 54.0
+margin_right = 580.0
+margin_bottom = 331.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Die for-Schleife wird verwendet um die Anweisungen in geschweiften Klammern eine festgelegt Anzahl von Wiederholungen durchlaufen zu lassen. for (Initialisierung; Bedingung; Ausdruck) { doSomething; }
+Die Initialisierung passiert als erstes und nur einmalig. Bei jedem Durchlaufen der Schleife wird die Bedingung getestet. Wenn die Bedingung wahr ist läuft die Schleife weiter und die Anweisungen werden ausgeführt und die Bedingung wird erneut überprüft. Ist die Bedingung nicht mehr wahr so endet die Schleife. 
+Beispiel:"
+autowrap = true
+
+[node name="Label" parent="Frame3/Info/Aufgabe" instance=ExtResource( 2 )]
+margin_left = 25.0
+margin_top = 256.0
+margin_right = 580.0
+margin_bottom = 395.0
+text = "      for (int i = 1; i<10;i=i+1)
+Variable i wird angelegt und nur innerhalb der for-Schleife verwendet. Der Variable i wird der Wert 1 zugeordnet (Startwert). Die Variable i darf maximal 10 werden und wird immer um 1 vergrößert. Mit i=i-1 wird die Schleife rückwärts durchgeführt."
+autowrap = true
+
+[node name="ButtonClose" type="Node2D" parent="Frame3/Info"]
+position = Vector2( 574, 29 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame3/Info/ButtonClose"]
+texture = ExtResource( 9 )
+
+[node name="Buttonlabel" type="Label" parent="Frame3/Info/ButtonClose/ButtonSprite"]
+margin_left = -45.0
+margin_top = -45.0
+margin_right = 50.0
+margin_bottom = 43.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 12 )
+text = "X"
+align = 1
+
+[node name="ButtonHelp1" type="Node2D" parent="Frame3/Info"]
+visible = false
+position = Vector2( 298, 373 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame3/Info/ButtonHelp1"]
+texture = ExtResource( 5 )
+
+[node name="Buttonhelp" type="Label" parent="Frame3/Info/ButtonHelp1/ButtonSprite"]
+margin_left = -185.0
+margin_top = -35.0
+margin_right = 195.0
+margin_bottom = 29.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 13 )
+text = " Hilfe 1"
+align = 1
+
+[node name="Help1" type="Node2D" parent="Frame3/Info"]
+visible = false
+position = Vector2( 2.28882e-05, -4.57764e-05 )
+z_index = 1
+
+[node name="Aufgabe" type="Sprite" parent="Frame3/Info/Help1"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame3/Info/Help1"]
+position = Vector2( 574, 29 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="ButtonSprite" type="Sprite" parent="Frame3/Info/Help1/ButtonClose"]
+texture = ExtResource( 9 )
+
+[node name="Buttonhelpclose" type="Label" parent="Frame3/Info/Help1/ButtonClose/ButtonSprite"]
+margin_left = -45.0
+margin_top = -47.5
+margin_right = 50.0
+margin_bottom = 40.5
+mouse_filter = 1
+custom_fonts/font = SubResource( 12 )
+text = "X"
+align = 1
+
+[node name="ButtonBack" parent="." instance=ExtResource( 1 )]
+
+[node name="Buttonstyle" type="Sprite" parent="."]
+position = Vector2( 300, 66 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Buttonstyle"]
+margin_left = -194.0
+margin_top = -37.0
+margin_right = 195.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 14 )
+text = "for-Schleife"
+align = 1
+
+[connection signal="gui_input" from="Frame/try/try" to="." method="_on_try_gui_input"]
+[connection signal="mouse_entered" from="Frame/try/try" to="." method="_on_try_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/try/try" to="." method="_on_try_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/exer/exer" to="." method="_on_exer_gui_input"]
+[connection signal="mouse_entered" from="Frame2/exer/exer" to="." method="_on_exer_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/exer/exer" to="." method="_on_exer_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame2/Exer" method="_on_Buttonhelp_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame2/Exer" method="_on_Buttonhelp_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame2/Exer" method="_on_Buttonhelp_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Exer" method="_on_Buttonhelpclose_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Exer" method="_on_Buttonhelpclose_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Exer" method="_on_Buttonhelpclose_mouse_exited"]
+[connection signal="gui_input" from="Frame3/info/info" to="." method="_on_info_gui_input"]
+[connection signal="mouse_entered" from="Frame3/info/info" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/info/info" to="." method="_on_info_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame3/Info" method="_on_Buttonhelp_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame3/Info" method="_on_Buttonhelp_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame3/Info" method="_on_Buttonhelp_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame3/Info" method="_on_Buttonhelpclose_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame3/Info" method="_on_Buttonhelpclose_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame3/Info" method="_on_Buttonhelpclose_mouse_exited"]

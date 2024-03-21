@@ -1,0 +1,290 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce5nr2hv5po0p"]
+
+[ext_resource type="Texture2D" uid="uid://8wfqmhgahh2a" path="res://sprite/BG.png" id="2"]
+[ext_resource type="Script" path="res://scripts/Main.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/Aufgabe1.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="5"]
+
+[node name="Main" type="Node2D" groups=["Persist"]]
+script = ExtResource("3")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(301.24, 200.178)
+scale = Vector2(0.999402, 0.994108)
+texture = ExtResource("2")
+
+[node name="buttonstyle" type="Sprite2D" parent="."]
+position = Vector2(306, 52)
+texture = ExtResource("5")
+
+[node name="Label" type="Label" parent="buttonstyle"]
+offset_left = -187.0
+offset_top = -39.0
+offset_right = 199.0
+offset_bottom = 38.0
+text = "Einstieg in die Arbeit mit dem Arduino"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Aufgabe1" type="Node2D" parent="."]
+position = Vector2(115, 130)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe1"]
+texture = ExtResource("5")
+
+[node name="Buttontext" type="Label" parent="Aufgabe1/buttonBG"]
+offset_right = 112.0
+offset_bottom = 26.0
+mouse_filter = 1
+text = "1. Allgemeines"
+
+[node name="Aufgabe2" type="Node2D" parent="."]
+position = Vector2(300, 131)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe2"]
+texture = ExtResource("5")
+
+[node name="Buttontext2" type="Label" parent="Aufgabe2/buttonBG"]
+mouse_filter = 1
+text = "2. Breadboard und Verbindungen"
+
+[node name="Aufgabe3" type="Node2D" parent="."]
+position = Vector2(497, 129)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe3"]
+texture = ExtResource("5")
+
+[node name="Buttontext3" type="Label" parent="Aufgabe3/buttonBG"]
+mouse_filter = 1
+text = "3. Widerstände"
+
+[node name="Aufgabe4" type="Node2D" parent="."]
+position = Vector2(115, 177)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe4"]
+texture = ExtResource("5")
+
+[node name="Buttontext4" type="Label" parent="Aufgabe4/buttonBG"]
+mouse_filter = 1
+text = "4. LEDs"
+
+[node name="Aufgabe5" type="Node2D" parent="."]
+position = Vector2(298, 177)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe5"]
+texture = ExtResource("5")
+
+[node name="Buttontext5" type="Label" parent="Aufgabe5/buttonBG"]
+mouse_filter = 1
+text = "5. Die Arduino IDE"
+
+[node name="Aufgabe6" type="Node2D" parent="."]
+position = Vector2(493, 179)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe6"]
+texture = ExtResource("5")
+
+[node name="Buttontext6" type="Label" parent="Aufgabe6/buttonBG"]
+mouse_filter = 1
+text = "6. Programme"
+
+[node name="Aufgabe7" type="Node2D" parent="."]
+position = Vector2(114, 225)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe7"]
+texture = ExtResource("5")
+
+[node name="Buttontext7" type="Label" parent="Aufgabe7/buttonBG"]
+mouse_filter = 1
+text = "7. Eigene Programme"
+
+[node name="Aufgabe8" type="Node2D" parent="."]
+position = Vector2(297, 225)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe8"]
+texture = ExtResource("5")
+
+[node name="Buttontext8" type="Label" parent="Aufgabe8/buttonBG"]
+mouse_filter = 1
+text = "8. Lautsprecher und Töne"
+
+[node name="Aufgabe9" type="Node2D" parent="."]
+position = Vector2(492, 226)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe9"]
+texture = ExtResource("5")
+
+[node name="Buttontext9" type="Label" parent="Aufgabe9/buttonBG"]
+mouse_filter = 1
+text = "9. Variablen"
+
+[node name="Aufgabe10" type="Node2D" parent="."]
+position = Vector2(116, 274)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe10"]
+texture = ExtResource("5")
+
+[node name="Buttontext10" type="Label" parent="Aufgabe10/buttonBG"]
+mouse_filter = 1
+text = "10. Der serielle Monitor"
+
+[node name="Aufgabe11" type="Node2D" parent="."]
+position = Vector2(296, 273)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe11"]
+texture = ExtResource("5")
+
+[node name="Buttontext11" type="Label" parent="Aufgabe11/buttonBG"]
+mouse_filter = 1
+text = "11. for-Schleife"
+
+[node name="Aufgabe12" type="Node2D" parent="."]
+position = Vector2(489, 270)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe12"]
+texture = ExtResource("5")
+
+[node name="Buttontext12" type="Label" parent="Aufgabe12/buttonBG"]
+mouse_filter = 1
+text = "12. Dimmen"
+
+[node name="Aufgabe13" type="Node2D" parent="."]
+position = Vector2(114, 321)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe13"]
+texture = ExtResource("5")
+
+[node name="Buttontext13" type="Label" parent="Aufgabe13/buttonBG"]
+mouse_filter = 1
+text = "13. RGB LEDs"
+
+[node name="Aufgabe14" type="Node2D" parent="."]
+position = Vector2(294, 322)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe14"]
+texture = ExtResource("5")
+
+[node name="Buttontext14" type="Label" parent="Aufgabe14/buttonBG"]
+mouse_filter = 1
+text = "14. if Bedingung"
+
+[node name="Aufgabe15" type="Node2D" parent="."]
+position = Vector2(487, 321)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe15"]
+texture = ExtResource("5")
+
+[node name="Buttontext15" type="Label" parent="Aufgabe15/buttonBG"]
+mouse_filter = 1
+text = "15. Taster"
+
+[node name="Aufgabe16" type="Node2D" parent="."]
+position = Vector2(113, 369)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe16"]
+texture = ExtResource("5")
+
+[node name="Buttontext16" type="Label" parent="Aufgabe16/buttonBG"]
+mouse_filter = 1
+text = "16. Transistoren"
+
+[node name="Aufgabe17" type="Node2D" parent="."]
+position = Vector2(293, 369)
+scale = Vector2(0.4, 0.4)
+
+[node name="buttonBG" type="Sprite2D" parent="Aufgabe17"]
+texture = ExtResource("5")
+
+[node name="Buttontext17" type="Label" parent="Aufgabe17/buttonBG"]
+mouse_filter = 1
+text = "17. Das Relais"
+
+[node name="AufgabeBtn" type="Node2D" parent="."]
+position = Vector2(362, 353)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4")
+
+[node name="buttonBG" type="Sprite2D" parent="AufgabeBtn"]
+position = Vector2(249, 29.2271)
+scale = Vector2(0.804938, 0.843595)
+texture = ExtResource("5")
+
+[node name="ButtontextP" type="Label" parent="AufgabeBtn"]
+offset_left = 236.0
+offset_top = 30.0
+offset_right = 355.0
+offset_bottom = 56.0
+mouse_filter = 1
+text = "Projektaufgabe"
+
+[connection signal="gui_input" from="Aufgabe1/buttonBG/Buttontext" to="." method="_on_Buttontext_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe1/buttonBG/Buttontext" to="." method="_on_Buttontext_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe1/buttonBG/Buttontext" to="." method="_on_Buttontext_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe2/buttonBG/Buttontext2" to="." method="_on_Buttontext2_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe2/buttonBG/Buttontext2" to="." method="_on_Buttontext2_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe2/buttonBG/Buttontext2" to="." method="_on_Buttontext2_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe3/buttonBG/Buttontext3" to="." method="_on_Buttontext3_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe3/buttonBG/Buttontext3" to="." method="_on_Buttontext3_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe3/buttonBG/Buttontext3" to="." method="_on_Buttontext3_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe4/buttonBG/Buttontext4" to="." method="_on_Buttontext4_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe4/buttonBG/Buttontext4" to="." method="_on_Buttontext4_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe4/buttonBG/Buttontext4" to="." method="_on_Buttontext4_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe5/buttonBG/Buttontext5" to="." method="_on_Buttontext5_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe5/buttonBG/Buttontext5" to="." method="_on_Buttontext5_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe5/buttonBG/Buttontext5" to="." method="_on_Buttontext5_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe6/buttonBG/Buttontext6" to="." method="_on_Buttontext6_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe6/buttonBG/Buttontext6" to="." method="_on_Buttontext6_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe6/buttonBG/Buttontext6" to="." method="_on_Buttontext6_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe7/buttonBG/Buttontext7" to="." method="_on_Buttontext7_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe7/buttonBG/Buttontext7" to="." method="_on_Buttontext7_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe7/buttonBG/Buttontext7" to="." method="_on_Buttontext7_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe8/buttonBG/Buttontext8" to="." method="_on_Buttontext8_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe8/buttonBG/Buttontext8" to="." method="_on_Buttontext8_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe8/buttonBG/Buttontext8" to="." method="_on_Buttontext8_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe9/buttonBG/Buttontext9" to="." method="_on_Buttontext9_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe9/buttonBG/Buttontext9" to="." method="_on_Buttontext9_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe9/buttonBG/Buttontext9" to="." method="_on_Buttontext9_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe10/buttonBG/Buttontext10" to="." method="_on_Buttontext10_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe10/buttonBG/Buttontext10" to="." method="_on_Buttontext10_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe10/buttonBG/Buttontext10" to="." method="_on_Buttontext10_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe11/buttonBG/Buttontext11" to="." method="_on_Buttontext11_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe11/buttonBG/Buttontext11" to="." method="_on_Buttontext11_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe11/buttonBG/Buttontext11" to="." method="_on_Buttontext11_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe12/buttonBG/Buttontext12" to="." method="_on_Buttontext12_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe12/buttonBG/Buttontext12" to="." method="_on_Buttontext12_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe12/buttonBG/Buttontext12" to="." method="_on_Buttontext12_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe13/buttonBG/Buttontext13" to="." method="_on_Buttontext13_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe13/buttonBG/Buttontext13" to="." method="_on_Buttontext13_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe13/buttonBG/Buttontext13" to="." method="_on_Buttontext13_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe14/buttonBG/Buttontext14" to="." method="_on_Buttontext14_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe14/buttonBG/Buttontext14" to="." method="_on_Buttontext14_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe14/buttonBG/Buttontext14" to="." method="_on_Buttontext14_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe15/buttonBG/Buttontext15" to="." method="_on_Buttontext15_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe15/buttonBG/Buttontext15" to="." method="_on_Buttontext15_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe15/buttonBG/Buttontext15" to="." method="_on_Buttontext15_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe16/buttonBG/Buttontext16" to="." method="_on_Buttontext16_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe16/buttonBG/Buttontext16" to="." method="_on_Buttontext16_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe16/buttonBG/Buttontext16" to="." method="_on_Buttontext16_mouse_exited"]
+[connection signal="gui_input" from="Aufgabe17/buttonBG/Buttontext17" to="." method="_on_Buttontext17_gui_input"]
+[connection signal="mouse_entered" from="Aufgabe17/buttonBG/Buttontext17" to="." method="_on_Buttontext17_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe17/buttonBG/Buttontext17" to="." method="_on_Buttontext17_mouse_exited"]
+[connection signal="gui_input" from="AufgabeBtn/ButtontextP" to="." method="_on_ButtontextP_gui_input"]
+[connection signal="mouse_entered" from="AufgabeBtn/ButtontextP" to="." method="_on_ButtontextP_mouse_entered"]
+[connection signal="mouse_exited" from="AufgabeBtn/ButtontextP" to="." method="_on_ButtontextP_mouse_exited"]
