@@ -1,0 +1,456 @@
+[gd_scene load_steps=56 format=3 uid="uid://8mieu5h6c7fl"]
+
+[ext_resource type="PackedScene" uid="uid://05baa6d7gub5" path="res://scenes/AufgabeBase.tscn" id="1_aomx3"]
+[ext_resource type="Texture2D" uid="uid://ye1ifhoiuhdm" path="res://sprite/16/Aufgabe.png" id="2_axyhf"]
+[ext_resource type="Texture2D" uid="uid://cubmoia5vm7xy" path="res://sprite/16/Allgemein.png" id="3_ps7gr"]
+[ext_resource type="Texture2D" uid="uid://skre1itg1te6" path="res://sprite/16/Funktion.png" id="4_w6x17"]
+[ext_resource type="Texture2D" uid="uid://d3ds236r5edp4" path="res://sprite/16/verwendung.png" id="5_6n670"]
+[ext_resource type="Texture2D" uid="uid://bsnqckfg40gpb" path="res://sprite/16/asdasd.png" id="6_5scab"]
+
+[sub_resource type="AtlasTexture" id="17"]
+atlas = ExtResource("3_ps7gr")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="18"]
+atlas = ExtResource("3_ps7gr")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="19"]
+atlas = ExtResource("3_ps7gr")
+region = Rect2(1920, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="20"]
+atlas = ExtResource("3_ps7gr")
+region = Rect2(2880, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="21"]
+atlas = ExtResource("3_ps7gr")
+region = Rect2(3840, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="22"]
+atlas = ExtResource("3_ps7gr")
+region = Rect2(4800, 0, 960, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_py58d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("17")
+}, {
+"duration": 1.0,
+"texture": SubResource("18")
+}, {
+"duration": 1.0,
+"texture": SubResource("19")
+}, {
+"duration": 1.0,
+"texture": SubResource("20")
+}, {
+"duration": 1.0,
+"texture": SubResource("21")
+}, {
+"duration": 1.0,
+"texture": SubResource("22")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="24"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(0, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="25"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(572, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="26"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(1144, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="27"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(1716, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="28"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(2288, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="29"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(2860, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="30"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(3432, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="31"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(4004, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="32"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(4576, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="33"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(5148, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="34"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(5720, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="35"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(6292, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="36"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(6864, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="37"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(7436, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="38"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(8008, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="39"]
+atlas = ExtResource("4_w6x17")
+region = Rect2(8580, 0, 572, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gq8g1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("24")
+}, {
+"duration": 1.0,
+"texture": SubResource("25")
+}, {
+"duration": 1.0,
+"texture": SubResource("26")
+}, {
+"duration": 1.0,
+"texture": SubResource("27")
+}, {
+"duration": 1.0,
+"texture": SubResource("28")
+}, {
+"duration": 1.0,
+"texture": SubResource("29")
+}, {
+"duration": 1.0,
+"texture": SubResource("30")
+}, {
+"duration": 1.0,
+"texture": SubResource("31")
+}, {
+"duration": 1.0,
+"texture": SubResource("32")
+}, {
+"duration": 1.0,
+"texture": SubResource("33")
+}, {
+"duration": 1.0,
+"texture": SubResource("34")
+}, {
+"duration": 1.0,
+"texture": SubResource("35")
+}, {
+"duration": 1.0,
+"texture": SubResource("36")
+}, {
+"duration": 1.0,
+"texture": SubResource("37")
+}, {
+"duration": 1.0,
+"texture": SubResource("38")
+}, {
+"duration": 1.0,
+"texture": SubResource("39")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="41"]
+atlas = ExtResource("5_6n670")
+region = Rect2(0, 0, 886, 540)
+
+[sub_resource type="AtlasTexture" id="42"]
+atlas = ExtResource("5_6n670")
+region = Rect2(886, 0, 886, 540)
+
+[sub_resource type="AtlasTexture" id="43"]
+atlas = ExtResource("5_6n670")
+region = Rect2(1772, 0, 886, 540)
+
+[sub_resource type="AtlasTexture" id="44"]
+atlas = ExtResource("5_6n670")
+region = Rect2(2658, 0, 886, 540)
+
+[sub_resource type="AtlasTexture" id="45"]
+atlas = ExtResource("5_6n670")
+region = Rect2(3544, 0, 886, 540)
+
+[sub_resource type="AtlasTexture" id="46"]
+atlas = ExtResource("5_6n670")
+region = Rect2(4430, 0, 886, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gure0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("41")
+}, {
+"duration": 1.0,
+"texture": SubResource("42")
+}, {
+"duration": 1.0,
+"texture": SubResource("43")
+}, {
+"duration": 1.0,
+"texture": SubResource("44")
+}, {
+"duration": 1.0,
+"texture": SubResource("45")
+}, {
+"duration": 1.0,
+"texture": SubResource("46")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="48"]
+atlas = ExtResource("6_5scab")
+region = Rect2(0, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="49"]
+atlas = ExtResource("6_5scab")
+region = Rect2(572, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="50"]
+atlas = ExtResource("6_5scab")
+region = Rect2(1144, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="51"]
+atlas = ExtResource("6_5scab")
+region = Rect2(1716, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="52"]
+atlas = ExtResource("6_5scab")
+region = Rect2(2288, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="53"]
+atlas = ExtResource("6_5scab")
+region = Rect2(2860, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="54"]
+atlas = ExtResource("6_5scab")
+region = Rect2(3432, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="55"]
+atlas = ExtResource("6_5scab")
+region = Rect2(4004, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="56"]
+atlas = ExtResource("6_5scab")
+region = Rect2(4576, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="57"]
+atlas = ExtResource("6_5scab")
+region = Rect2(5148, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="58"]
+atlas = ExtResource("6_5scab")
+region = Rect2(5720, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="59"]
+atlas = ExtResource("6_5scab")
+region = Rect2(6292, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="60"]
+atlas = ExtResource("6_5scab")
+region = Rect2(6864, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="61"]
+atlas = ExtResource("6_5scab")
+region = Rect2(7436, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="62"]
+atlas = ExtResource("6_5scab")
+region = Rect2(8008, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="63"]
+atlas = ExtResource("6_5scab")
+region = Rect2(8580, 0, 572, 540)
+
+[sub_resource type="AtlasTexture" id="64"]
+atlas = ExtResource("6_5scab")
+region = Rect2(9152, 0, 572, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3a1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("48")
+}, {
+"duration": 1.0,
+"texture": SubResource("49")
+}, {
+"duration": 1.0,
+"texture": SubResource("50")
+}, {
+"duration": 1.0,
+"texture": SubResource("51")
+}, {
+"duration": 1.0,
+"texture": SubResource("52")
+}, {
+"duration": 1.0,
+"texture": SubResource("53")
+}, {
+"duration": 1.0,
+"texture": SubResource("54")
+}, {
+"duration": 1.0,
+"texture": SubResource("55")
+}, {
+"duration": 1.0,
+"texture": SubResource("56")
+}, {
+"duration": 1.0,
+"texture": SubResource("57")
+}, {
+"duration": 1.0,
+"texture": SubResource("58")
+}, {
+"duration": 1.0,
+"texture": SubResource("59")
+}, {
+"duration": 1.0,
+"texture": SubResource("60")
+}, {
+"duration": 1.0,
+"texture": SubResource("61")
+}, {
+"duration": 1.0,
+"texture": SubResource("62")
+}, {
+"duration": 1.0,
+"texture": SubResource("63")
+}, {
+"duration": 1.0,
+"texture": SubResource("64")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="A16" instance=ExtResource("1_aomx3")]
+
+[node name="label" parent="title" index="0"]
+text = "Der Transistor"
+
+[node name="Label" parent="task0" index="0"]
+text = "Lautere Musik"
+
+[node name="Label2" parent="task0" index="1"]
+text = "Baue den Schaltplan nach und spiele dein Lied aus Aufgabe 8 mit verstärkter Lautstärke ab."
+
+[node name="Sprite" parent="task0" index="3"]
+texture = ExtResource("2_axyhf")
+
+[node name="Label" parent="task0/ButtonNext/task00" index="0"]
+text = "Taster und Lautsprecher"
+
+[node name="Label2" parent="task0/ButtonNext/task00" index="1"]
+text = "Schließe zwei Taster und einen Lautsprecher an. Bei Druck auf den einen soll ein tiefer Ton gespielt werden, beim anderen ein hoher Ton."
+
+[node name="Sprite" parent="task0/ButtonNext/task00" index="3"]
+visible = false
+
+[node name="ButtonNext2" parent="task0/ButtonNext/task00" index="6"]
+visible = false
+
+[node name="Label" parent="task1" index="0"]
+text = "Blinklicht mit Transistor"
+
+[node name="Label2" parent="task1" index="1"]
+offset_top = 172.0
+offset_bottom = 658.0
+text = "LED, 220 Ohm Widerstand, NPN-Transistor, Jumper-Kabel
+Verbinde den Arduino mit dem Breadboard. Schließe die LED an den Transistor an. Der längere Stift der LED (Anode) sollte mit dem Kollektor des Transistors verbunden werden und der kürzere Stift (Kathode) sollte mit dem Emitter des Transistors verbunden werden. Verbinde den Basispin des Transistors über den 220-Ohm-Widerstand mit dem digitalen Pin 13 des Arduino. Schließe den Emitter des Transistors an den GND-Pin des Arduino an. Lade den folgenden Code auf den Arduino hoch:
+
+"
+
+[node name="Label3" parent="task1" index="2"]
+visible = true
+offset_left = 536.0
+offset_top = 565.0
+offset_right = 2216.0
+offset_bottom = 1051.0
+text = "void setup() {
+  pinMode(13, OUTPUT);
+}
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}"
+
+[node name="Sprite" parent="task1" index="3"]
+visible = false
+
+[node name="Label" parent="task2" index="0"]
+text = "Transistoren"
+
+[node name="1" type="AnimatedSprite2D" parent="task2" index="1"]
+position = Vector2(433, 468)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_py58d")
+speed_scale = 0.5
+
+[node name="TextureRect" type="TextureRect" parent="task2/1" index="0"]
+mouse_default_cursor_shape = 2
+
+[node name="2" type="AnimatedSprite2D" parent="task2" index="2"]
+position = Vector2(1012, 462)
+scale = Vector2(0.687678, 0.687676)
+sprite_frames = SubResource("SpriteFrames_gq8g1")
+speed_scale = 0.5
+
+[node name="TextureRect2" type="TextureRect" parent="task2/2" index="0"]
+mouse_default_cursor_shape = 2
+
+[node name="3" type="AnimatedSprite2D" parent="task2" index="3"]
+position = Vector2(436, 868)
+scale = Vector2(0.737073, 0.737071)
+sprite_frames = SubResource("SpriteFrames_gure0")
+speed_scale = 0.5
+
+[node name="TextureRect3" type="TextureRect" parent="task2/3" index="0"]
+mouse_default_cursor_shape = 2
+
+[node name="4" type="AnimatedSprite2D" parent="task2" index="4"]
+position = Vector2(1008, 864)
+scale = Vector2(0.694873, 0.718729)
+sprite_frames = SubResource("SpriteFrames_r3a1s")
+speed_scale = 0.5
+
+[node name="TextureRect4" type="TextureRect" parent="task2/4" index="0"]
+mouse_default_cursor_shape = 2
+
+[node name="Label2" parent="task2" index="5"]
+text = "Bewege die Maus über die Videoclips, um sie abzuspielen."
+
+[node name="Sprite" parent="task2" index="7"]
+visible = false

@@ -1,0 +1,370 @@
+[gd_scene load_steps=21 format=3 uid="uid://c7pofwqohj4qo"]
+
+[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/alt/ButtonBack.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfx7mlajxi0hk" path="res://scenes/alt/plain.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://dxesaj08nynda" path="res://sprite/standard.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cbtyp01b7nf1p" path="res://sprite/exer.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cah4vca5mxd1w" path="res://sprite/info.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="7"]
+[ext_resource type="Script" path="res://scripts/alt/Exer.gd" id="8"]
+[ext_resource type="Texture2D" uid="uid://d4gpvavxu7d5u" path="res://sprite/aufgabe.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://b5g0ih0pqjrji" path="res://sprite/close.png" id="10"]
+[ext_resource type="Script" path="res://scripts/alt/Aufgabe_5.gd" id="11"]
+[ext_resource type="Texture2D" uid="uid://xplooqgyhlw1" path="res://sprite/try.png" id="12"]
+[ext_resource type="Script" path="res://scripts/Antworten.gd" id="13"]
+[ext_resource type="Script" path="res://scripts/Zuordnungsaufgabe.gd" id="14"]
+[ext_resource type="Texture2D" uid="uid://ccw0n3wfx483q" path="res://sprite/a5/wrong.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://cfrxr75fhyrv7" path="res://sprite/a5/buttone.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://ciu3u0mixwc80" path="res://sprite/a5/Arduino.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://dc7udkok88svh" path="res://sprite/a5/corr.png" id="18"]
+[ext_resource type="Script" path="res://scripts/ButtonClose.gd" id="19"]
+
+[sub_resource type="RectangleShape2D" id="9"]
+size = Vector2(40.1264, 19.4233)
+
+[sub_resource type="RectangleShape2D" id="10"]
+size = Vector2(161.415, 33.1894)
+
+[node name="Aufgabe_5" type="Node2D" groups=["saver"]]
+script = ExtResource("11")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("4")
+centered = false
+
+[node name="Buttonstyle" type="Sprite2D" parent="."]
+position = Vector2(300, 66)
+texture = ExtResource("7")
+
+[node name="Label" type="Label" parent="Buttonstyle"]
+mouse_filter = 0
+text = "Die Arduino IDE"
+
+[node name="ButtonBack" parent="." instance=ExtResource("2")]
+
+[node name="Frame" type="Node2D" parent="."]
+position = Vector2(102, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="try" type="Sprite2D" parent="Frame"]
+texture = ExtResource("12")
+
+[node name="try" type="Label" parent="Frame/try"]
+mouse_filter = 1
+text = "probieren"
+
+[node name="Try" type="Node2D" parent="Frame"]
+visible = false
+z_index = 1
+position = Vector2(-145.714, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("8")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame/Try"]
+texture = ExtResource("9")
+centered = false
+
+[node name="Label" parent="Frame/Try/Aufgabe" instance=ExtResource("3")]
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe"]
+text = "IDE ausprobieren"
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe"]
+text = "Starte die Arduino IDE und lade folgendes Programm hoch:
+
+
+
+
+
+
+
+
+Öffne den seriellen Monitor. Was gibt dieser aus?"
+
+[node name="ButtonClose" type="Node2D" parent="Frame/Try"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("19")
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/ButtonClose"]
+texture = ExtResource("10")
+
+[node name="Buttonlabel" type="Label" parent="Frame/Try/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Frame3" type="Node2D" parent="."]
+position = Vector2(490, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="info" type="Sprite2D" parent="Frame3"]
+texture = ExtResource("6")
+
+[node name="info" type="Label" parent="Frame3/info"]
+mouse_filter = 1
+text = "lesen"
+
+[node name="Info" type="Node2D" parent="Frame3"]
+z_index = 1
+position = Vector2(-700, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("8")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame3/Info"]
+texture = ExtResource("9")
+centered = false
+
+[node name="title" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "Die Arduino IDE"
+
+[node name="text" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "Programme wie die Arduino IDE (=integrated development environment, übersetzt in etwa \"Enwicklerumgebung mit integrierten Funktionen\" nehmen dir beim schreiben deiner Arduino-Programme viel Arbeit ab. Du kannst mit einem einfachen Klick das Programm kompilieren lassen, also in Maschinensprache übersetzen und anschließend auf den Arduino laden. Auch werden dir Fehler angezeigt, zu den häufigsten gehören übrigens: Semikolon vergessen, setup und loop fehlen oder sind doppelt vorhanden. Mit strg+t kannst du dir den Code schön formatieren lassen. "
+
+[node name="ButtonClose" type="Node2D" parent="Frame3/Info"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame3/Info/ButtonClose"]
+texture = ExtResource("10")
+
+[node name="Buttonlabel" type="Label" parent="Frame3/Info/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Frame2" type="Node2D" parent="."]
+scale = Vector2(0.7, 0.7)
+
+[node name="exer" type="Sprite2D" parent="Frame2"]
+position = Vector2(422.857, 310)
+texture = ExtResource("5")
+
+[node name="exer" type="Label" parent="Frame2/exer"]
+mouse_filter = 1
+text = "prüfen"
+
+[node name="Zuordnungsaufgabe" type="Node2D" parent="Frame2"]
+visible = false
+script = ExtResource("14")
+
+[node name="aufgabe" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe"]
+texture = ExtResource("9")
+centered = false
+
+[node name="Label" type="Label" parent="Frame2/Zuordnungsaufgabe/aufgabe"]
+text = "Ordne die Begriffe  zu"
+
+[node name="ButtonClose2" type="Node2D" parent="Frame2/Zuordnungsaufgabe"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/ButtonClose2"]
+texture = ExtResource("10")
+
+[node name="Buttonlabel" type="Label" parent="Frame2/Zuordnungsaufgabe/ButtonClose2/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Arduino" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe"]
+position = Vector2(410.902, 226.179)
+scale = Vector2(0.56633, 0.56633)
+texture = ExtResource("17")
+
+[node name="Loesung1" type="Area2D" parent="Frame2/Zuordnungsaufgabe/Arduino"]
+position = Vector2(-186.997, -270.477)
+
+[node name="feld1" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung1"]
+shape = SubResource("9")
+
+[node name="wrong" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung1"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("15")
+
+[node name="corr" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung1"]
+visible = false
+position = Vector2(8.82877, -1.76575)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18")
+
+[node name="Loesung2" type="Area2D" parent="Frame2/Zuordnungsaufgabe/Arduino"]
+position = Vector2(-125.196, -183.955)
+
+[node name="feld1" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung2"]
+position = Vector2(-1.12579, -2.64862)
+shape = SubResource("9")
+
+[node name="wrong" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung2"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("15")
+
+[node name="corr" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung2"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18")
+
+[node name="Loesung3" type="Area2D" parent="Frame2/Zuordnungsaufgabe/Arduino"]
+position = Vector2(-47.5024, -125.685)
+
+[node name="feld1" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung3"]
+shape = SubResource("9")
+
+[node name="wrong" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung3"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("15")
+
+[node name="corr" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung3"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18")
+
+[node name="Loesung4" type="Area2D" parent="Frame2/Zuordnungsaufgabe/Arduino"]
+position = Vector2(192.64, -183.955)
+
+[node name="feld1" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung4"]
+shape = SubResource("9")
+
+[node name="wrong" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung4"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("15")
+
+[node name="corr" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung4"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18")
+
+[node name="Loesung5" type="Area2D" parent="Frame2/Zuordnungsaufgabe/Arduino"]
+position = Vector2(134.37, -67.4148)
+
+[node name="feld1" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung5"]
+shape = SubResource("9")
+
+[node name="wrong" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung5"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("15")
+
+[node name="corr" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Arduino/Loesung5"]
+visible = false
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18")
+
+[node name="Antworten1" type="CharacterBody2D" parent="Frame2/Zuordnungsaufgabe"]
+position = Vector2(113.512, 89.7928)
+input_pickable = true
+script = ExtResource("13")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Antworten1"]
+shape = SubResource("10")
+
+[node name="buttonstyle" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Antworten1"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("16")
+
+[node name="Label" type="Label" parent="Frame2/Zuordnungsaufgabe/Antworten1"]
+text = "Ausgabe"
+
+[node name="Antworten2" type="CharacterBody2D" parent="Frame2/Zuordnungsaufgabe"]
+z_index = 1
+position = Vector2(113, 140)
+input_pickable = true
+script = ExtResource("13")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Antworten2"]
+shape = SubResource("10")
+
+[node name="buttonstyle" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Antworten2"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("16")
+
+[node name="Label" type="Label" parent="Frame2/Zuordnungsaufgabe/Antworten2"]
+text = "Code überprüfen/
+compilen"
+clip_text = true
+
+[node name="Antworten3" type="CharacterBody2D" parent="Frame2/Zuordnungsaufgabe"]
+z_index = 1
+position = Vector2(113, 193)
+input_pickable = true
+script = ExtResource("13")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Antworten3"]
+shape = SubResource("10")
+
+[node name="buttonstyle" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Antworten3"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("16")
+
+[node name="Label" type="Label" parent="Frame2/Zuordnungsaufgabe/Antworten3"]
+text = "Auf den Arduino laden"
+clip_text = true
+
+[node name="Antworten4" type="CharacterBody2D" parent="Frame2/Zuordnungsaufgabe"]
+z_index = 1
+position = Vector2(112, 248)
+input_pickable = true
+script = ExtResource("13")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Antworten4"]
+shape = SubResource("10")
+
+[node name="buttonstyle" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Antworten4"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("16")
+
+[node name="Label" type="Label" parent="Frame2/Zuordnungsaufgabe/Antworten4"]
+text = "Serieller Monitor"
+clip_text = true
+
+[node name="Antworten5" type="CharacterBody2D" parent="Frame2/Zuordnungsaufgabe"]
+z_index = 1
+position = Vector2(112, 304)
+input_pickable = true
+script = ExtResource("13")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Frame2/Zuordnungsaufgabe/Antworten5"]
+shape = SubResource("10")
+
+[node name="buttonstyle" type="Sprite2D" parent="Frame2/Zuordnungsaufgabe/Antworten5"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("16")
+
+[node name="Label" type="Label" parent="Frame2/Zuordnungsaufgabe/Antworten5"]
+text = "USB Schnittstelle"
+clip_text = true
+
+[connection signal="gui_input" from="Frame/try/try" to="." method="_on_try_gui_input"]
+[connection signal="mouse_entered" from="Frame/try/try" to="." method="_on_try_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/try/try" to="." method="_on_try_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame3/info/info" to="." method="_on_info_gui_input"]
+[connection signal="mouse_entered" from="Frame3/info/info" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/info/info" to="." method="_on_info_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/exer/exer" to="." method="_on_exer_gui_input"]
+[connection signal="mouse_entered" from="Frame2/exer/exer" to="." method="_on_exer_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/exer/exer" to="." method="_on_exer_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Zuordnungsaufgabe/ButtonClose2/ButtonSprite/Buttonlabel" to="Frame2/Zuordnungsaufgabe" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Zuordnungsaufgabe/ButtonClose2/ButtonSprite/Buttonlabel" to="Frame2/Zuordnungsaufgabe" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Zuordnungsaufgabe/ButtonClose2/ButtonSprite/Buttonlabel" to="Frame2/Zuordnungsaufgabe" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="body_entered" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung1" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung1_body_entered"]
+[connection signal="body_exited" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung1" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung1_body_exited"]
+[connection signal="body_entered" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung2" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung2_body_entered"]
+[connection signal="body_exited" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung2" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung2_body_exited"]
+[connection signal="body_entered" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung3" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung3_body_entered"]
+[connection signal="body_exited" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung3" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung3_body_exited"]
+[connection signal="body_entered" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung4" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung4_body_entered"]
+[connection signal="body_exited" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung4" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung4_body_exited"]
+[connection signal="body_entered" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung5" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung5_body_entered"]
+[connection signal="body_exited" from="Frame2/Zuordnungsaufgabe/Arduino/Loesung5" to="Frame2/Zuordnungsaufgabe" method="_on_Loesung5_body_exited"]
+[connection signal="input_event" from="Frame2/Zuordnungsaufgabe/Antworten1" to="Frame2/Zuordnungsaufgabe/Antworten1" method="_on_Antworten_input_event"]
+[connection signal="input_event" from="Frame2/Zuordnungsaufgabe/Antworten2" to="Frame2/Zuordnungsaufgabe/Antworten2" method="_on_Antworten_input_event"]
+[connection signal="input_event" from="Frame2/Zuordnungsaufgabe/Antworten3" to="Frame2/Zuordnungsaufgabe/Antworten3" method="_on_Antworten_input_event"]
+[connection signal="input_event" from="Frame2/Zuordnungsaufgabe/Antworten4" to="Frame2/Zuordnungsaufgabe/Antworten4" method="_on_Antworten_input_event"]
+[connection signal="input_event" from="Frame2/Zuordnungsaufgabe/Antworten5" to="Frame2/Zuordnungsaufgabe/Antworten5" method="_on_Antworten_input_event"]

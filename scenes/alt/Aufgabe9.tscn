@@ -1,0 +1,318 @@
+[gd_scene load_steps=14 format=3 uid="uid://wkabxbs7u6ga"]
+
+[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/alt/ButtonBack.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d4gpvavxu7d5u" path="res://sprite/aufgabe.png" id="4"]
+[ext_resource type="Script" path="res://scripts/alt/HelpBase.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/Base.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/alt/Exer.gd" id="7"]
+[ext_resource type="Texture2D" uid="uid://dxesaj08nynda" path="res://sprite/standard.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://b5g0ih0pqjrji" path="res://sprite/close.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://8wfqmhgahh2a" path="res://sprite/BG.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cbtyp01b7nf1p" path="res://sprite/exer.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://xplooqgyhlw1" path="res://sprite/try.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cah4vca5mxd1w" path="res://sprite/info.png" id="13"]
+[ext_resource type="PackedScene" uid="uid://buo4045ii5gj8" path="res://scenes/ButtonBack2.tscn" id="14"]
+
+[node name="Aufgabe_9" type="Node2D" groups=["saver"]]
+script = ExtResource("6")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("10")
+centered = false
+
+[node name="Frame" type="Node2D" parent="."]
+position = Vector2(102, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="try" type="Sprite2D" parent="Frame"]
+texture = ExtResource("12")
+
+[node name="try" type="Label" parent="Frame/try"]
+mouse_filter = 1
+text = "probieren"
+
+[node name="Try" type="Node2D" parent="Frame"]
+visible = false
+z_index = 1
+position = Vector2(-145.714, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("7")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame/Try"]
+texture = ExtResource("4")
+centered = false
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe"]
+text = "Variablen Übungen"
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe"]
+text = "Lege in deinem Musikstück aus Aufgabe 8 Variablen für die Tondauer an, z.B. a für Achtelnoten, v für Viertel, h für Halbe und benutze sie in den Delays. So kannst du die Geschwindigkeit deines Stückes sehr leicht anpassen."
+
+[node name="Buttonnext" type="Node2D" parent="Frame/Try/Aufgabe"]
+position = Vector2(511, 371)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/Aufgabe/Buttonnext"]
+texture = ExtResource("3")
+
+[node name="next" type="Label" parent="Frame/Try/Aufgabe/Buttonnext/ButtonSprite"]
+mouse_filter = 1
+text = "weiter"
+
+[node name="zwei" type="Node2D" parent="Frame/Try/Aufgabe"]
+script = ExtResource("5")
+
+[node name="Sprite" type="Sprite2D" parent="Frame/Try/Aufgabe/zwei"]
+texture = ExtResource("4")
+centered = false
+
+[node name="Label" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+text = "Was wird das Programm tun? Probiere es aus!"
+
+[node name="Label2" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+
+[node name="Label3" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+text = "int f;
+void setup(){
+f=100; 
+}
+void loop(){
+tone(11,f);
+delay(100);
+f=f+1; 
+}"
+
+[node name="Buttonnext2" type="Node2D" parent="Frame/Try/Aufgabe/zwei"]
+position = Vector2(511, 371)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/Aufgabe/zwei/Buttonnext2"]
+texture = ExtResource("3")
+
+[node name="next2" type="Label" parent="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite"]
+mouse_filter = 1
+text = "weiter"
+
+[node name="drei" type="Sprite2D" parent="Frame/Try/Aufgabe/zwei"]
+position = Vector2(-0.000411988, 0)
+texture = ExtResource("4")
+centered = false
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe/zwei/drei"]
+text = "Fortgeschritten"
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe/zwei/drei"]
+text = "Programmiere eine Ampel mit einer roten, grünen und gelben LED
+"
+
+[node name="ButtonClose" type="Node2D" parent="Frame/Try"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonlabel" type="Label" parent="Frame/Try/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Frame2" type="Node2D" parent="."]
+visible = false
+position = Vector2(290, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="exer" type="Sprite2D" parent="Frame2"]
+texture = ExtResource("11")
+
+[node name="exer" type="Label" parent="Frame2/exer"]
+mouse_filter = 1
+text = "prüfen"
+
+[node name="Exer" type="Node2D" parent="Frame2"]
+z_index = 1
+position = Vector2(-414.286, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("7")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame2/Exer"]
+texture = ExtResource("4")
+centered = false
+
+[node name="title" type="Label" parent="Frame2/Exer/Aufgabe"]
+text = "Gültigkeitsbereiche der Variablen"
+
+[node name="text" type="Label" parent="Frame2/Exer/Aufgabe"]
+text = "Eine Variable kann global am Anfang des Programmes vor 'void setup()' deklariert werden, lokal innerhalb von Funktionen und manchmal auch innerhalb eine Anweisungsblocks wie zum Beispiel einer Schleife. Wo die Variable deklariert wird bestimmt ihren Geltungsbereich, oder die Fähigkeit bestimmte Programmteile auf den Wert der Variablen zuzugreifen.
+int inputVariable = 0; // deklariert eine Variable und setzt ihren Wert auf 0
+inputVariable = analogRead(2); // setzt den Wert der Variable gleich mit dem Wert von Analog Pin 2; 
+Schreibe nun jeweils ein Programm, bei dem die Variable inputVariable global und lokal gültig ist"
+
+[node name="Buttonnext" type="Node2D" parent="Frame2/Exer/Aufgabe"]
+position = Vector2(511, 371)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Exer/Aufgabe/Buttonnext"]
+texture = ExtResource("3")
+
+[node name="next" type="Label" parent="Frame2/Exer/Aufgabe/Buttonnext/ButtonSprite"]
+mouse_filter = 1
+text = "weiter"
+
+[node name="zwei" type="Node2D" parent="Frame2/Exer/Aufgabe"]
+script = ExtResource("5")
+
+[node name="Sprite" type="Sprite2D" parent="Frame2/Exer/Aufgabe/zwei"]
+texture = ExtResource("4")
+centered = false
+
+[node name="Label" type="Label" parent="Frame2/Exer/Aufgabe/zwei/Sprite"]
+text = "Welchen Wert haben die Variablen a, n und m am Ende des Programms?"
+
+[node name="Label3" type="Label" parent="Frame2/Exer/Aufgabe/zwei/Sprite"]
+text = "int a, b, c;
+long n, m;
+float x, y;
+
+void setup(){
+a=10;
+n=100-8;
+m=2*a+15-3;
+a=200+20; 
+}
+void loop(){
+tone(11,a);
+delay(n);
+noTone();
+delay(m); 
+}"
+
+[node name="ButtonBack" parent="Frame2/Exer/Aufgabe/zwei" instance=ExtResource("14")]
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Exer"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Exer/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonlabel" type="Label" parent="Frame2/Exer/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Frame3" type="Node2D" parent="."]
+position = Vector2(490, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="info" type="Sprite2D" parent="Frame3"]
+texture = ExtResource("13")
+
+[node name="info" type="Label" parent="Frame3/info"]
+mouse_filter = 1
+text = "lesen"
+
+[node name="Info" type="Node2D" parent="Frame3"]
+z_index = 1
+position = Vector2(-700, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("7")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame3/Info"]
+texture = ExtResource("4")
+centered = false
+
+[node name="title" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "Variablen"
+
+[node name="text" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "Variablen sind Speicherplätze, in denen sich der Mikrocontroller Zahlenwerte merken kann. Dabei gibt es kleine und große Speicherplätze und Speicherplätze, die Kommazahlen speichern können.
+Boolean → bool → Hier können nur die Zahlen 0 (false) oder 1 (true) gespeichert werden.
+Integer → int → Hier können ganze Zahlen von -32 768 bis +32 767 gespeichert werden
+long → Hier können ganze Zahlen von –2 147 483 648 bis +2 147 483 647 gespeichert werden
+float → Kommazahlen
+"
+
+[node name="ButtonClose" type="Node2D" parent="Frame3/Info"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame3/Info/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonlabel" type="Label" parent="Frame3/Info/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="ButtonHelp1" type="Node2D" parent="Frame3/Info"]
+position = Vector2(298, 373)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame3/Info/ButtonHelp1"]
+texture = ExtResource("3")
+
+[node name="Buttonhelp" type="Label" parent="Frame3/Info/ButtonHelp1/ButtonSprite"]
+mouse_filter = 1
+text = "Beispiel"
+
+[node name="Help1" type="Node2D" parent="Frame3/Info"]
+visible = false
+z_index = 1
+position = Vector2(2.28882e-05, -4.57764e-05)
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame3/Info/Help1"]
+texture = ExtResource("8")
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame3/Info/Help1"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame3/Info/Help1/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonhelpclose" type="Label" parent="Frame3/Info/Help1/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="ButtonBack" parent="." instance=ExtResource("1")]
+
+[node name="Buttonstyle" type="Sprite2D" parent="."]
+position = Vector2(300, 66)
+texture = ExtResource("3")
+
+[node name="Label" type="Label" parent="Buttonstyle"]
+text = "Variablen"
+
+[connection signal="gui_input" from="Frame/try/try" to="." method="_on_try_gui_input"]
+[connection signal="mouse_entered" from="Frame/try/try" to="." method="_on_try_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/try/try" to="." method="_on_try_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/exer/exer" to="." method="_on_exer_gui_input"]
+[connection signal="mouse_entered" from="Frame2/exer/exer" to="." method="_on_exer_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/exer/exer" to="." method="_on_exer_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame2/Exer" method="_on_next_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame2/Exer" method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame2/Exer" method="_on_next_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame3/info/info" to="." method="_on_info_gui_input"]
+[connection signal="mouse_entered" from="Frame3/info/info" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/info/info" to="." method="_on_info_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame3/Info" method="_on_Buttonhelp_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame3/Info" method="_on_Buttonhelp_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame3/Info" method="_on_Buttonhelp_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame3/Info" method="_on_Buttonhelpclose_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame3/Info" method="_on_Buttonhelpclose_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame3/Info" method="_on_Buttonhelpclose_mouse_exited"]

@@ -10,7 +10,7 @@ func _ready():
 func _on_Buttonback_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:
-			get_tree().change_scene("res://scenes/Main.tscn")
+			get_tree().change_scene_to_file("res://scenes/Main.tscn")
 
 func _on_Buttonback_mouse_entered():
 	$ButtonSprite.scale = Vector2(1.1,1.1)

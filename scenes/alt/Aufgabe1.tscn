@@ -1,0 +1,288 @@
+[gd_scene load_steps=21 format=3 uid="uid://bhtiqge6sw3ml"]
+
+[ext_resource type="Script" path="res://scripts/Base.gd" id="1_v0rdk"]
+[ext_resource type="Texture2D" uid="uid://dxesaj08nynda" path="res://sprite/standard.png" id="2_5bpr7"]
+[ext_resource type="Texture2D" uid="uid://bcpb8ghsvpnvp" path="res://sprite/try.png" id="3_81rae"]
+[ext_resource type="Script" path="res://scripts/Exer.gd" id="4_6k5un"]
+[ext_resource type="FontFile" uid="uid://bpy323havmp2c" path="res://fonts/Terminal-Grotesque-master/font.ttf" id="4_lq2c4"]
+[ext_resource type="Texture2D" uid="uid://d4gpvavxu7d5u" path="res://sprite/aufgabe.png" id="5_lubdh"]
+[ext_resource type="PackedScene" uid="uid://cuqbwmgdnlkib" path="res://scenes/ButtonNext.tscn" id="6_y1ta6"]
+[ext_resource type="Texture2D" uid="uid://8i1ccjy5ppk6" path="res://sprite/a1/tink2.png" id="7_nosyw"]
+[ext_resource type="Texture2D" uid="uid://dikywgiphpkvy" path="res://sprite/a1/tink1.png" id="8_q3cha"]
+[ext_resource type="Texture2D" uid="uid://bue6g5h5vojse" path="res://sprite/a1/tink4.png" id="9_yrntu"]
+[ext_resource type="Texture2D" uid="uid://dsrqil3a5sm50" path="res://sprite/a1/tink5.png" id="10_7cuil"]
+[ext_resource type="Texture2D" uid="uid://cwjtbvl372rbx" path="res://sprite/a1/tink6.png" id="11_ev6xr"]
+[ext_resource type="Texture2D" uid="uid://qs0be668vuex" path="res://sprite/a1/tink3.png" id="12_0kukm"]
+[ext_resource type="Texture2D" uid="uid://b5g0ih0pqjrji" path="res://sprite/close.png" id="13_8vfjs"]
+[ext_resource type="PackedScene" uid="uid://dkfbh5837j8ju" path="res://scenes/button_close.tscn" id="13_qxg53"]
+[ext_resource type="Texture2D" uid="uid://cbtyp01b7nf1p" path="res://sprite/exer.png" id="14_sg1ys"]
+[ext_resource type="Texture2D" uid="uid://cah4vca5mxd1w" path="res://sprite/info.png" id="15_xjmvc"]
+[ext_resource type="Texture2D" uid="uid://bvxu2bv0curfw" path="res://sprite/a2/ardu.png" id="16_syfao"]
+[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/ButtonBack.tscn" id="17_8tqt0"]
+[ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="18_yn4f6"]
+
+[node name="Aufgabe1" type="Node2D"]
+script = ExtResource("1_v0rdk")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_5bpr7")
+centered = false
+
+[node name="Frame0" type="Node2D" parent="."]
+position = Vector2(102, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="sprite" type="Sprite2D" parent="Frame0"]
+texture = ExtResource("3_81rae")
+
+[node name="try" type="Label" parent="Frame0/sprite"]
+offset_left = -68.5714
+offset_top = 60.0
+offset_right = 56.4286
+offset_bottom = 95.0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_lq2c4")
+theme_override_font_sizes/font_size = 32
+text = "probieren"
+
+[node name="task" type="Node2D" parent="Frame0"]
+visible = false
+z_index = 1
+position = Vector2(-145.714, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("4_6k5un")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame0/task"]
+texture = ExtResource("5_lubdh")
+centered = false
+
+[node name="Buttonnext" parent="Frame0/task" instance=ExtResource("6_y1ta6")]
+
+[node name="Label3" type="Label" parent="Frame0/task"]
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+
+[node name="Label" type="Label" parent="Frame0/task"]
+text = "TinkerCAD einrichten"
+
+[node name="Tink2" type="Sprite2D" parent="Frame0/task"]
+position = Vector2(316, 262)
+scale = Vector2(0.414773, 0.414773)
+texture = ExtResource("7_nosyw")
+
+[node name="Tink1" type="Sprite2D" parent="Frame0/task"]
+position = Vector2(124, 261)
+scale = Vector2(0.414773, 0.414773)
+texture = ExtResource("8_q3cha")
+region_rect = Rect2(20, 20, 380, 540)
+
+[node name="zwei" type="Node2D" parent="Frame0/task"]
+position = Vector2(-1.52588e-05, 0)
+
+[node name="Aufgabe2" type="Sprite2D" parent="Frame0/task/zwei"]
+texture = ExtResource("5_lubdh")
+centered = false
+
+[node name="Label4" type="Label" parent="Frame0/task/zwei/Aufgabe2"]
+text = "Wähle \"Schaltkreise\" für eine Arduino Simulation."
+
+[node name="Label5" type="Label" parent="Frame0/task/zwei/Aufgabe2"]
+text = "Hier kannst du die benötigten Bauteile auswählen."
+
+[node name="Label6" type="Label" parent="Frame0/task/zwei/Aufgabe2"]
+text = "Wähle bei Code \"Text\" anstelle von \"Blöcke\" um die dir vertraute Arduino IDE zu sehen."
+
+[node name="Label2" type="Label" parent="Frame0/task/zwei/Aufgabe2"]
+text = "TinkerCAD einrichten"
+
+[node name="Tink4" type="Sprite2D" parent="Frame0/task/zwei/Aufgabe2/Label2"]
+position = Vector2(331, 152)
+scale = Vector2(0.242792, 0.242792)
+texture = ExtResource("9_yrntu")
+
+[node name="Tink5" type="Sprite2D" parent="Frame0/task/zwei/Aufgabe2/Label2"]
+position = Vector2(290, 294)
+scale = Vector2(0.242792, 0.242792)
+texture = ExtResource("10_7cuil")
+
+[node name="Tink6" type="Sprite2D" parent="Frame0/task/zwei/Aufgabe2/Label2"]
+position = Vector2(290, 332)
+scale = Vector2(0.242792, 0.242792)
+texture = ExtResource("11_ev6xr")
+
+[node name="Tink3" type="Sprite2D" parent="Frame0/task/zwei/Aufgabe2/Label2"]
+position = Vector2(92.5674, 151.375)
+scale = Vector2(0.242792, 0.242792)
+texture = ExtResource("12_0kukm")
+
+[node name="ButtonClose" parent="Frame0/task" instance=ExtResource("13_qxg53")]
+
+[node name="Frame1" type="Node2D" parent="."]
+position = Vector2(298, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="exer" type="Sprite2D" parent="Frame1"]
+texture = ExtResource("14_sg1ys")
+
+[node name="exer" type="Label" parent="Frame1/exer"]
+offset_left = -95.7143
+offset_top = 72.8571
+offset_right = -42.7143
+offset_bottom = 98.8571
+mouse_filter = 1
+text = "prüfen"
+
+[node name="Exer" type="Node2D" parent="Frame1"]
+visible = false
+z_index = 1
+position = Vector2(-414.286, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("4_6k5un")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame1/Exer"]
+texture = ExtResource("5_lubdh")
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame1/Exer"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame1/Exer/ButtonClose"]
+texture = ExtResource("13_8vfjs")
+
+[node name="Buttonlabel" type="Label" parent="Frame1/Exer/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Help1" type="Node2D" parent="Frame1/Exer"]
+visible = false
+z_index = 1
+position = Vector2(2.28882e-05, -4.57764e-05)
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame1/Exer/Help1"]
+texture = ExtResource("2_5bpr7")
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame1/Exer/Help1"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame1/Exer/Help1/ButtonClose"]
+texture = ExtResource("13_8vfjs")
+
+[node name="Buttonhelpclose" type="Label" parent="Frame1/Exer/Help1/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Label" type="Label" parent="Frame1/Exer"]
+text = "Welche der Aussagen treffen zu?"
+
+[node name="Label2" type="Label" parent="Frame1/Exer"]
+text = "- Es gibt zwei GND, einen 5 V und einen 3,5 V Pin.
+- Ein Mikrocontroller ist wie ein kleiner Computer, er hat einen Prozessor, Arbeitsspeicher und diverse Ein- und Ausgänge.
+- Es gibt 5 analoge und 10 digitale Pins.
+- Ein Mikrocontroller ist ein Gerät um hochauflösende Bilder und Videos anzufertigen.
+"
+
+[node name="Frame2" type="Node2D" parent="."]
+position = Vector2(490, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="info" type="Sprite2D" parent="Frame2"]
+texture = ExtResource("15_xjmvc")
+
+[node name="info" type="Label" parent="Frame2/info"]
+mouse_filter = 1
+text = "lesen"
+
+[node name="Info" type="Node2D" parent="Frame2"]
+visible = false
+z_index = 1
+position = Vector2(-700, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("4_6k5un")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame2/Info"]
+texture = ExtResource("2_5bpr7")
+centered = false
+
+[node name="Arduino-Fixed" type="Sprite2D" parent="Frame2/Info/Aufgabe"]
+position = Vector2(455, 297)
+scale = Vector2(0.436667, 0.436667)
+texture = ExtResource("16_syfao")
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Info"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Info/ButtonClose"]
+texture = ExtResource("13_8vfjs")
+
+[node name="Buttonlabel" type="Label" parent="Frame2/Info/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Help1" type="Node2D" parent="Frame2/Info"]
+visible = false
+z_index = 1
+position = Vector2(2.28882e-05, -4.57764e-05)
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame2/Info/Help1"]
+texture = ExtResource("2_5bpr7")
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Info/Help1"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Info/Help1/ButtonClose"]
+texture = ExtResource("13_8vfjs")
+
+[node name="Buttonhelpclose" type="Label" parent="Frame2/Info/Help1/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Überschrift" type="Label" parent="Frame2/Info"]
+text = "Der Arduino Microcontroller"
+
+[node name="Text" type="Label" parent="Frame2/Info"]
+text = "Ein Mikrocontroller ist wie ein kleiner Computer, er hat einen Prozessor, Arbeitsspeicher und diverse Ein und Ausgänge. Im Falle der Arduino-Boards handelt es sich um den Microcontroller Atmel AVR ATmega, der auf eine Platine aufgelötet wurde. Mit Microcontrollern werden  sogenannte I/O Pins gesteuert. Diese Pins sind mit weiblichen Steckern auf der Oberseite des Boards angebracht. Über die Pins werden die verschiedenen Peripheriefunktionen angesteuert
+Folgende Pins sind für uns wichtig:
+- Analoge Pins
+- Digitale Pins
+- 5 V
+- 3,5 V
+- GND"
+
+[node name="Sprite" type="Sprite2D" parent="Frame2/Info"]
+
+[node name="ButtonBack" parent="." instance=ExtResource("17_8tqt0")]
+
+[node name="Buttonstyle" type="Sprite2D" parent="."]
+position = Vector2(300, 66)
+texture = ExtResource("18_yn4f6")
+
+[node name="Label" type="Label" parent="Buttonstyle"]
+text = "Der Arduino - 
+Hardware und Software"
+
+[connection signal="gui_input" from="Frame0/sprite/try" to="." method="_on_try_gui_input"]
+[connection signal="mouse_entered" from="Frame0/sprite/try" to="." method="_on_try_mouse_entered"]
+[connection signal="mouse_exited" from="Frame0/sprite/try" to="." method="_on_try_mouse_exited"]
+[connection signal="gui_input" from="Frame1/exer/exer" to="." method="_on_exer_gui_input"]
+[connection signal="mouse_entered" from="Frame1/exer/exer" to="." method="_on_exer_mouse_entered"]
+[connection signal="mouse_exited" from="Frame1/exer/exer" to="." method="_on_exer_mouse_exited"]
+[connection signal="gui_input" from="Frame1/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame1/Exer" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame1/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame1/Exer" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame1/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame1/Exer" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame1/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame1/Exer" method="_on_Buttonhelpclose_gui_input"]
+[connection signal="mouse_entered" from="Frame1/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame1/Exer" method="_on_Buttonhelpclose_mouse_entered"]
+[connection signal="mouse_exited" from="Frame1/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame1/Exer" method="_on_Buttonhelpclose_mouse_exited"]
+[connection signal="gui_input" from="Frame2/info/info" to="." method="_on_info_gui_input"]
+[connection signal="mouse_entered" from="Frame2/info/info" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/info/info" to="." method="_on_info_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Info" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Info" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Info" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Info" method="_on_Buttonhelpclose_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Info" method="_on_Buttonhelpclose_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Info/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Info" method="_on_Buttonhelpclose_mouse_exited"]

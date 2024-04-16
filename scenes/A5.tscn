@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://hh04fky84e52"]
+
+[ext_resource type="PackedScene" uid="uid://05baa6d7gub5" path="res://scenes/AufgabeBase.tscn" id="1_1ft1p"]
+[ext_resource type="FontFile" uid="uid://bpy323havmp2c" path="res://fonts/Terminal-Grotesque-master/font.ttf" id="2_xqs0y"]
+[ext_resource type="PackedScene" uid="uid://c2g868my3has8" path="res://scenes/Zuordnungsaufgabe.tscn" id="3_kpi5y"]
+
+[node name="A5" instance=ExtResource("1_1ft1p")]
+
+[node name="Label" parent="task0" index="0"]
+text = "IDE ausprobieren"
+
+[node name="Label2" parent="task0" index="1"]
+offset_right = 1745.0
+offset_bottom = 649.0
+text = "Starte die Arduino IDE und lade folgendes Programm hoch:
+
+
+
+
+
+
+
+
+
+
+
+öffne anschließend den seriellen Monitor - was gibt dieser aus?"
+
+[node name="Label4" type="Label" parent="task0" index="2"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 358.0
+offset_right = 1103.0
+offset_bottom = 790.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xqs0y")
+theme_override_font_sizes/font_size = 50
+text = "int x = 0;
+void setup(){
+Serial.begin(9600);
+}
+void loop(){
+Serial.println(x);
+x=x+5;
+}"
+autowrap_mode = 2
+
+[node name="Sprite" parent="task0" index="4"]
+visible = false
+position = Vector2(1576, 679)
+
+[node name="ButtonNext" parent="task0" index="6"]
+visible = false
+
+[node name="Label" parent="task1" index="0"]
+text = "DIe Funktionen der IDE"
+
+[node name="Label2" parent="task1" index="1"]
+text = "Ordne zu:"
+
+[node name="Sprite" parent="task1" index="3"]
+visible = false
+
+[node name="Zuordnungsaufgabe" parent="task1" index="4" instance=ExtResource("3_kpi5y")]
+position = Vector2(319, 43)
+scale = Vector2(2.5, 2.5)
+
+[node name="Label" parent="task2" index="0"]
+text = "Die Arduino IDE"
+
+[node name="Label2" parent="task2" index="1"]
+text = "Programme wie die Arduino IDE (=integrated development environment, übersetzt in etwa \"Enwicklerumgebung mit integrierten Funktionen\" nehmen dir beim schreiben deiner Arduino-Programme viel Arbeit ab. Du kannst mit einem einfachen Klick das Programm kompilieren lassen, also in Maschinensprache übersetzen und anschließend auf den Arduino laden. Auch werden dir Fehler angezeigt, zu den häufigsten gehören übrigens: Semikolon vergessen, setup und loop fehlen oder sind doppelt vorhanden. Mit strg+t kannst du dir den Code schön formatieren lassen. "
+
+[node name="Sprite" parent="task2" index="3"]
+visible = false

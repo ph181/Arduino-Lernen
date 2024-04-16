@@ -1,0 +1,336 @@
+[gd_scene load_steps=13 format=3 uid="uid://2v21sq7gp2ik"]
+
+[ext_resource type="PackedScene" uid="uid://buo4045ii5gj8" path="res://scenes/ButtonBack2.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/alt/ButtonBack.tscn" id="2"]
+[ext_resource type="Script" path="res://scripts/Base.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="5"]
+[ext_resource type="Script" path="res://scripts/alt/HelpBase.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/alt/Exer.gd" id="7"]
+[ext_resource type="Texture2D" uid="uid://dxesaj08nynda" path="res://sprite/standard.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://b5g0ih0pqjrji" path="res://sprite/close.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://d4gpvavxu7d5u" path="res://sprite/aufgabe.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cbtyp01b7nf1p" path="res://sprite/exer.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://xplooqgyhlw1" path="res://sprite/try.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cah4vca5mxd1w" path="res://sprite/info.png" id="14"]
+
+[node name="Aufgabe_14" type="Node2D" groups=["saver"]]
+script = ExtResource("3")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("8")
+centered = false
+
+[node name="Frame" type="Node2D" parent="."]
+position = Vector2(102, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="try" type="Sprite2D" parent="Frame"]
+texture = ExtResource("13")
+
+[node name="try" type="Label" parent="Frame/try"]
+mouse_filter = 1
+text = "probieren"
+
+[node name="Try" type="Node2D" parent="Frame"]
+z_index = 1
+position = Vector2(-145.714, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("7")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame/Try"]
+texture = ExtResource("10")
+centered = false
+
+[node name="Buttonnext" type="Node2D" parent="Frame/Try/Aufgabe"]
+position = Vector2(511, 371)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/Aufgabe/Buttonnext"]
+texture = ExtResource("5")
+
+[node name="next" type="Label" parent="Frame/Try/Aufgabe/Buttonnext/ButtonSprite"]
+mouse_filter = 1
+text = "weiter"
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe"]
+text = "Stein, Schere, Papier"
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe"]
+text = "Schreibe ein Stein-Schere-Papier Programm. Es soll nach jedem Druck auf den Reset-Knopf zufällig eins der drei Worte \"Schere\", \"Stein\" oder \"Papier\" auf dem seriellen Monitor anzeigen. Eine Möglichkeit wäre, eine Zufallszahl zu erzeugen. Wenn sie 1 ist, wird \"Schere\" angezeigt, bei einer 2 \"Stein\", bei einer 3 \"Papier\"."
+
+[node name="zwei" type="Node2D" parent="Frame/Try/Aufgabe"]
+script = ExtResource("6")
+
+[node name="Sprite" type="Sprite2D" parent="Frame/Try/Aufgabe/zwei"]
+texture = ExtResource("10")
+centered = false
+
+[node name="Label" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+text = "else?"
+
+[node name="Label2" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+text = "Hinter if kann man noch ein else schreiben. Ser auf else folgende Block wird nur ausgeführt, wenn der mathematische Ausdruck in if nicht wahr war. Was wird also diese Programm mit einer LED an Pin 9 tun?"
+
+[node name="Label3" type="Label" parent="Frame/Try/Aufgabe/zwei/Sprite"]
+text = "long i = 1;
+void setup(){
+}
+void loop(){
+if (i<100000){
+analogWrite(9,10);
+}
+else {
+analogWrite(9,255);
+}
+i=i+1;
+}"
+
+[node name="Buttonnext2" type="Node2D" parent="Frame/Try/Aufgabe/zwei"]
+visible = false
+position = Vector2(511, 371)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/Aufgabe/zwei/Buttonnext2"]
+texture = ExtResource("5")
+
+[node name="next2" type="Label" parent="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite"]
+mouse_filter = 1
+text = "weiter"
+
+[node name="ButtonBack" parent="Frame/Try/Aufgabe/zwei" instance=ExtResource("1")]
+
+[node name="drei" type="Sprite2D" parent="Frame/Try/Aufgabe/zwei"]
+position = Vector2(-0.000411988, 0)
+texture = ExtResource("10")
+centered = false
+
+[node name="title" type="Label" parent="Frame/Try/Aufgabe/zwei/drei"]
+text = "Fortgeschritten"
+
+[node name="text" type="Label" parent="Frame/Try/Aufgabe/zwei/drei"]
+text = "Programmiere eine Ampel mit einer roten, grünen und gelben LED
+"
+
+[node name="ButtonClose" type="Node2D" parent="Frame/Try"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame/Try/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonlabel" type="Label" parent="Frame/Try/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Frame2" type="Node2D" parent="."]
+visible = false
+position = Vector2(290, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="exer" type="Sprite2D" parent="Frame2"]
+texture = ExtResource("12")
+
+[node name="exer" type="Label" parent="Frame2/exer"]
+mouse_filter = 1
+text = "prüfen"
+
+[node name="Exer" type="Node2D" parent="Frame2"]
+z_index = 1
+position = Vector2(-414.286, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("7")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame2/Exer"]
+texture = ExtResource("10")
+centered = false
+
+[node name="title" type="Label" parent="Frame2/Exer/Aufgabe"]
+text = "Erkläre, was das folgende Programm bewirkt"
+
+[node name="Label" type="Label" parent="Frame2/Exer/Aufgabe"]
+text = "int x=0;
+void setup(){
+Serial.begin(9600);
+randomSeed(analogRead(A1));
+x=random(1,7);
+if(x<6) Serial.println(x);
+if(x>5) {
+Serial.print(“Du hast eine 6!“);
+Serial.print(“Nochmal würfeln!“);
+}
+}
+void loop(){
+}"
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Exer"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Exer/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonlabel" type="Label" parent="Frame2/Exer/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="ButtonHelp1" type="Node2D" parent="Frame2/Exer"]
+visible = false
+position = Vector2(298, 373)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Exer/ButtonHelp1"]
+texture = ExtResource("5")
+
+[node name="Buttonhelp" type="Label" parent="Frame2/Exer/ButtonHelp1/ButtonSprite"]
+mouse_filter = 1
+text = " Hilfe 1"
+
+[node name="Help1" type="Node2D" parent="Frame2/Exer"]
+visible = false
+z_index = 1
+position = Vector2(2.28882e-05, -4.57764e-05)
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame2/Exer/Help1"]
+texture = ExtResource("8")
+centered = false
+
+[node name="ButtonClose" type="Node2D" parent="Frame2/Exer/Help1"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame2/Exer/Help1/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonhelpclose" type="Label" parent="Frame2/Exer/Help1/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="Frame3" type="Node2D" parent="."]
+visible = false
+position = Vector2(490, 217)
+scale = Vector2(0.7, 0.7)
+
+[node name="info" type="Sprite2D" parent="Frame3"]
+texture = ExtResource("14")
+
+[node name="info" type="Label" parent="Frame3/info"]
+mouse_filter = 1
+text = "lesen"
+
+[node name="Info" type="Node2D" parent="Frame3"]
+z_index = 1
+position = Vector2(-700, -310)
+scale = Vector2(1.42857, 1.42857)
+script = ExtResource("7")
+
+[node name="Aufgabe" type="Sprite2D" parent="Frame3/Info"]
+texture = ExtResource("10")
+centered = false
+
+[node name="Buttonnext" type="Node2D" parent="Frame3/Info/Aufgabe"]
+position = Vector2(511, 371)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame3/Info/Aufgabe/Buttonnext"]
+texture = ExtResource("5")
+
+[node name="next" type="Label" parent="Frame3/Info/Aufgabe/Buttonnext/ButtonSprite"]
+mouse_filter = 1
+text = "weiter"
+
+[node name="title" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "if und else"
+
+[node name="text" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "Die If-Abfrage testet ob eine bestimmte Bedingung wahr ist oder nicht. Ist dies der Fall, so werden Anweisungen innerhalb der geschweiften Klammer ausgeführt. Ist diese Bedingung nicht erfüllt werden die Anweisungen innerhalb der Klammer übersprungen. 
+if (someVariable < value) {
+doSomething; } 
+'if... else' - erlaubt das Treffen einer 'entweder ... oder' Entscheidung. Zum Beispiel einen digitalen Eingang prüfen und im Falle von 'HIGH andere Anweisungen ausführen als im Falle von 'LOW'. Dies kann man so im Programmcode abbilden:"
+
+[node name="Label" type="Label" parent="Frame3/Info/Aufgabe"]
+text = "if (inputPin == HIGH){
+doThingA;
+}
+else {
+doThingB;
+}"
+
+[node name="zwei" type="Node2D" parent="Frame3/Info/Aufgabe"]
+visible = false
+position = Vector2(0.000198364, 0)
+script = ExtResource("6")
+
+[node name="Sprite" type="Sprite2D" parent="Frame3/Info/Aufgabe/zwei"]
+texture = ExtResource("10")
+centered = false
+
+[node name="Label2" type="Label" parent="Frame3/Info/Aufgabe/zwei/Sprite"]
+text = "'else' kann auch noch weitere 'if' Abfragen enthalten, so dass mehrfache Test zur selben Zeit stattfinden können. Es ist sogar möglich eine unbegrenzte Anzahl von diesen 'else' Abzweigungen zu nutzen. Allerdings wird je nach den Bedingungen nur ein Set von Anweisungen ausgeführt:"
+
+[node name="Label" type="Label" parent="Frame3/Info/Aufgabe/zwei/Sprite"]
+text = "if (inputPin < 500) {
+doThingA;
+}
+else if (inputPin >= 1000) {
+doThingB;
+}
+else {
+doThingC;
+}
+"
+
+[node name="ButtonBack" parent="Frame3/Info/Aufgabe/zwei" instance=ExtResource("1")]
+
+[node name="ButtonClose" type="Node2D" parent="Frame3/Info"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+
+[node name="ButtonSprite" type="Sprite2D" parent="Frame3/Info/ButtonClose"]
+texture = ExtResource("9")
+
+[node name="Buttonlabel" type="Label" parent="Frame3/Info/ButtonClose/ButtonSprite"]
+mouse_filter = 1
+text = "X"
+
+[node name="ButtonBack" parent="." instance=ExtResource("2")]
+
+[node name="Buttonstyle" type="Sprite2D" parent="."]
+position = Vector2(300, 66)
+texture = ExtResource("5")
+
+[node name="Label" type="Label" parent="Buttonstyle"]
+text = "if-Bedingung"
+
+[connection signal="gui_input" from="Frame/try/try" to="." method="_on_try_gui_input"]
+[connection signal="mouse_entered" from="Frame/try/try" to="." method="_on_try_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/try/try" to="." method="_on_try_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame/Try" method="_on_next_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/Aufgabe/zwei/Buttonnext2/ButtonSprite/next2" to="Frame/Try" method="_on_next2_mouse_exited"]
+[connection signal="gui_input" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame/Try/ButtonClose/ButtonSprite/Buttonlabel" to="Frame/Try" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/exer/exer" to="." method="_on_exer_gui_input"]
+[connection signal="mouse_entered" from="Frame2/exer/exer" to="." method="_on_exer_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/exer/exer" to="." method="_on_exer_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/ButtonClose/ButtonSprite/Buttonlabel" to="Frame2/Exer" method="_on_Buttonlabel_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame2/Exer" method="_on_Buttonhelp_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame2/Exer" method="_on_Buttonhelp_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/ButtonHelp1/ButtonSprite/Buttonhelp" to="Frame2/Exer" method="_on_Buttonhelp_mouse_exited"]
+[connection signal="gui_input" from="Frame2/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Exer" method="_on_Buttonhelpclose_gui_input"]
+[connection signal="mouse_entered" from="Frame2/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Exer" method="_on_Buttonhelpclose_mouse_entered"]
+[connection signal="mouse_exited" from="Frame2/Exer/Help1/ButtonClose/ButtonSprite/Buttonhelpclose" to="Frame2/Exer" method="_on_Buttonhelpclose_mouse_exited"]
+[connection signal="gui_input" from="Frame3/info/info" to="." method="_on_info_gui_input"]
+[connection signal="mouse_entered" from="Frame3/info/info" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/info/info" to="." method="_on_info_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame3/Info" method="_on_next_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame3/Info" method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/Aufgabe/Buttonnext/ButtonSprite/next" to="Frame3/Info" method="_on_next_mouse_exited"]
+[connection signal="gui_input" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="Frame3/Info/ButtonClose/ButtonSprite/Buttonlabel" to="Frame3/Info" method="_on_Buttonlabel_mouse_exited"]

@@ -1,0 +1,137 @@
+[gd_scene load_steps=3 format=3 uid="uid://6lg1t4cbhk4k"]
+
+[ext_resource type="PackedScene" uid="uid://05baa6d7gub5" path="res://scenes/AufgabeBase.tscn" id="1_xswfi"]
+[ext_resource type="FontFile" uid="uid://bpy323havmp2c" path="res://fonts/Terminal-Grotesque-master/font.ttf" id="2_tiom3"]
+
+[node name="A9" instance=ExtResource("1_xswfi")]
+
+[node name="label" parent="title" index="0"]
+text = "Variablen"
+
+[node name="Label" parent="task0" index="0"]
+text = "Variablen Übungen"
+
+[node name="Label2" parent="task0" index="1"]
+text = "Lege in deinem Musikstück aus Aufgabe 8 Variablen für die Tondauer an, z.B. a für Achtelnoten, v für Viertel, h für Halbe und benutze sie in den Delays. So kannst du die Geschwindigkeit deines Stückes sehr leicht anpassen."
+
+[node name="Sprite" parent="task0" index="3"]
+visible = false
+
+[node name="Label" parent="task0/ButtonNext/task00" index="0"]
+text = "Was wird das Programm tun? Probiere es aus!"
+
+[node name="Label2" parent="task0/ButtonNext/task00" index="1"]
+visible = false
+text = "int f;
+void setup(){
+f=100; 
+}
+void loop(){
+tone(11,f);
+delay(100);
+f=f+1; 
+}"
+
+[node name="Label4" type="Label" parent="task0/ButtonNext/task00" index="2"]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 211.0
+offset_right = 1216.0
+offset_bottom = 697.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tiom3")
+theme_override_font_sizes/font_size = 50
+text = "int f;
+void setup(){
+f=100; 
+}
+void loop(){
+tone(11,f);
+delay(100);
+f=f+1; 
+}"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="task0/ButtonNext/task00" index="3"]
+layout_mode = 0
+offset_left = 1162.0
+offset_top = 591.0
+offset_right = 1708.0
+offset_bottom = 853.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tiom3")
+theme_override_font_sizes/font_size = 50
+text = "Fortgeschritten:
+Programmiere eine Ampel mit einer roten, grünen und gelben LED"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite" parent="task0/ButtonNext/task00" index="5"]
+visible = false
+
+[node name="ButtonNext2" parent="task0/ButtonNext/task00" index="8"]
+visible = false
+
+[node name="Label" parent="task1" index="0"]
+text = "Gültigkeitsbereiche der Variablen"
+
+[node name="Label2" parent="task1" index="1"]
+text = "Eine Variable kann global am Anfang des Programmes vor 'void setup()' deklariert werden, lokal innerhalb von Funktionen und manchmal auch innerhalb eine Anweisungsblocks wie zum Beispiel einer Schleife. Wo die Variable deklariert wird bestimmt ihren Geltungsbereich, oder die Fähigkeit bestimmte Programmteile auf den Wert der Variablen zuzugreifen.
+int inputVariable = 0; // deklariert eine Variable und setzt ihren Wert auf 0
+inputVariable = analogRead(2); // setzt den Wert der Variable gleich mit dem Wert von Analog Pin 2; 
+Schreibe nun jeweils ein Programm, bei dem die Variable inputVariable global und lokal gültig ist"
+
+[node name="Sprite" parent="task1" index="3"]
+visible = false
+
+[node name="ButtonNext" parent="task1" index="5"]
+visible = true
+
+[node name="Label" parent="task1/ButtonNext/task00" index="0"]
+offset_right = 1723.0
+text = "Welchen Wert haben die Variablen a, n und m am Ende des Programms?"
+autowrap_mode = 2
+
+[node name="Label2" parent="task1/ButtonNext/task00" index="1"]
+offset_left = 749.0
+offset_top = 184.0
+offset_right = 1169.0
+offset_bottom = 1048.0
+text = "int a, b, c;
+long n, m;
+float x, y;
+
+void setup(){
+a=10;
+n=100-8;
+m=2*a+15-3;
+a=200+20; 
+}
+void loop(){
+tone(11,a);
+delay(n);
+noTone();
+delay(m); 
+}"
+
+[node name="Sprite" parent="task1/ButtonNext/task00" index="3"]
+visible = false
+
+[node name="AnimatedSprite2D" parent="task1/ButtonNext/task00" index="4"]
+visible = false
+
+[node name="Label" parent="task2" index="0"]
+text = "Variablen"
+
+[node name="Label2" parent="task2" index="1"]
+text = "Variablen sind Speicherplätze, in denen sich der Mikrocontroller Zahlenwerte merken kann. Dabei gibt es kleine und große Speicherplätze und Speicherplätze, die Kommazahlen speichern können.
+Boolean → bool → Hier können nur die Zahlen 0 (false) oder 1 (true) gespeichert werden.
+Integer → int → Hier können ganze Zahlen gespeichert werden.
+float → Dieser Variablentyp ist für Kommazahlen.
+"
+
+[node name="Sprite" parent="task2" index="3"]
+visible = false

@@ -1,244 +1,156 @@
 extends Node2D
 
-onready var oneSprite = $colors/one
-onready var twoSprite = $colors/two
-onready var threeSprite = $colors/three
-onready var fourSprite = $colors/four
-#onready var rand = RandomNumberGenerator.new()
+var cones = []
+var ctwos = []
+var cthrees = []
+var cfours = []
 
-onready var oneDigit = $digits/oneD
-onready var twoDigit = $digits/twoD
-onready var threeDigit = $digits/threeD
-onready var fourDigit = $digits/fourD
+var dones = []
+var dtwos = []
+var dthrees = []
+var dfours = []
 
+@export var curr_color: Array = [0, 0, 0, 0]
+@export var curr_digit: Array = [0, 0, 0, 0]
 
-const Widerstandcolors = preload("res://scripts/Widerstandcolors.gd")
-const Widerstandsdigits = preload("res://scripts/Widerstandsdigits.gd")
+var colorup
+var colordown
+var digitup
+var digitdown
 
-export var curr_one: int = 0
-export var curr_two: int = 0
-export var curr_three: int = 0
-export var curr_four: int = 0
+@onready var colorSprite
+@onready var digitSprite
 
-export var curr_1: int = 0
-export var curr_2: int = 0
-export var curr_3: int = 0
-export var curr_4: int = 0
+func _ready():
+	for i in range(10):
+		cones.append(load("res://sprite/a3/col_" + str(i) + ".png"))
+		ctwos.append(load("res://sprite/a3/col_" + str(i) + ".png"))
+		cthrees.append(load("res://sprite/a3/col_" + str(i) + ".png"))
+		dones.append(load("res://sprite/a3/" + str(i) + ".png"))
+		dtwos.append(load("res://sprite/a3/" + str(i) + ".png"))
+		dthrees.append(load("res://sprite/a3/mul_" + str(i) + ".png"))
 
-
-
-func ready():
-	oneSprite.texture = Widerstandcolors.ones[curr_one]
-	twoSprite.texture = Widerstandcolors.twos[curr_two]
-	threeSprite.texture = Widerstandcolors.threes[curr_three]
-	fourSprite.texture = Widerstandcolors.fours[curr_four]
+	cfours.append(load("res://sprite/a3/tolcol1.png"))
+	cfours.append(load("res://sprite/a3/tolcol2.png"))
+	dfours.append(load("res://sprite/a3/tol1.png"))
+	dfours.append(load("res://sprite/a3/tol2.png"))
 	
-	oneDigit.texture = Widerstandsdigits.ones[curr_1]
-	twoDigit.texture = Widerstandsdigits.twos[curr_2]
-	threeDigit.texture = Widerstandsdigits.threes[curr_3]
-	fourDigit.texture = Widerstandsdigits.fours[curr_4]
+	for k in range(4):
+		colorSprite = get_node("colors/Sprite" + str(k))
 	
-	
-func resistor():
-	pass
+	for j in range(4):
+		digitSprite = get_node("digits/digit" + str(j))
+		
+	for i in range(4):
+		colorup = get_node("c" + str(i) + "/up")
+		colorup.gui_input.connect(_on_up_gui_input.bind(i))
+		colordown = get_node("c" + str(i) + "/down")
+		colordown.gui_input.connect(_on_down_gui_input.bind(i))		
+		colorup.mouse_entered.connect(_on_colorup_mouse_entered.bind(i))
+		colorup.mouse_exited.connect(_on_colorup_mouse_exited.bind(i))
+		colordown.mouse_entered.connect(_on_colordown_mouse_entered.bind(i))
+		colordown.mouse_exited.connect(_on_colordown_mouse_exited.bind(i))
+	for l in range(4):
+		digitup = get_node("d" + str(l) + "/up")
+		digitup.gui_input.connect(_on_up_gui_input.bind(l))
+		digitdown = get_node("d" + str(l) + "/down")
+		digitdown.gui_input.connect(_on_down_gui_input.bind(l))		
+		digitup.mouse_entered.connect(_on_digitup_mouse_entered.bind(l))
+		digitup.mouse_exited.connect(_on_digitup_mouse_exited.bind(l))
+		digitdown.mouse_entered.connect(_on_digitdown_mouse_entered.bind(l))
+		digitdown.mouse_exited.connect(_on_digitdown_mouse_exited.bind(l))
 
-
-func _on_up_gui_input(event):
+func _on_up_gui_input(event,i):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:
-			for _i in range (Widerstandcolors.ones.size()-1,0,-1):
-				curr_one = (curr_one + 1) % Widerstandcolors.ones.size()
-				oneSprite.texture = Widerstandcolors.ones[curr_one]
-			for _i in range (Widerstandsdigits.ones.size()-1,0,-1):
-				curr_1 = (curr_1 + 1) % Widerstandsdigits.ones.size()
-				oneDigit.texture = Widerstandsdigits.ones[curr_1]
-				
-func _on_do_gui_input(event):
+			colorup = get_node("c" + str(i) + "/up")
+			curr_color[i] = (curr_color[i] + 1) % 10 # Erhöhen Sie den Index und wickeln Sie ihn um, wenn er 10 erreicht
+			if i == 0:
+				get_node("colors/Sprite" + str(i)).texture = cones[curr_color[i]] # Ändern Sie die Textur basierend auf dem aktuellen Index
+			elif i == 1:
+				get_node("colors/Sprite" + str(i)).texture = ctwos[curr_color[i]]
+			elif i == 2:
+				get_node("colors/Sprite" + str(i)).texture = cthrees[curr_color[i]]
+			elif i == 3:
+				if curr_color[i] >= cfours.size():
+					curr_color[i] = cfours.size() - 1
+				get_node("colors/Sprite" + str(i)).texture = cfours[curr_color[i]]
+			digitup = get_node("d" + str(i) + "/up")
+			curr_digit[i] = (curr_digit[i] + 1) % 10 # Erhöhen Sie den Index und wickeln Sie ihn um, wenn er 10 erreicht
+			if i == 0:
+				get_node("digits/digit" + str(i)).texture = dones[curr_digit[i]]
+			elif i == 1:
+				get_node("digits/digit" + str(i)).texture = dtwos[curr_digit[i]]
+			elif i == 2:
+				get_node("digits/digit" + str(i)).texture = dthrees[curr_digit[i]]
+			elif i == 3:
+				if curr_digit[i] >= dfours.size():
+					curr_digit[i] = dfours.size() - 1
+				get_node("digits/digit" + str(i)).texture = dfours[curr_digit[i]]
+
+
+func _on_down_gui_input(event,i):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:
-			curr_one = (curr_one + 1) % Widerstandcolors.ones.size()
-			oneSprite.texture = Widerstandcolors.ones[curr_one]
-			curr_1 = (curr_1 + 1) % Widerstandsdigits.ones.size()
-			oneDigit.texture = Widerstandsdigits.ones[curr_1]
-			
-func _on_do_mouse_entered():
-	$one/dowS.scale = Vector2(1.1,1.1) # Replace with function body.
-func _on_do_mouse_exited():
-	$one/dowS.scale = Vector2(1,1) # Replace with function body.
-func _on_up_mouse_entered():
-	$one/upS.scale = Vector2(1.1,1.1) # Replace with function body.
-func _on_up_mouse_exited():
-	$one/upS.scale = Vector2(1,1) # Replace with function body.
-	
-func _on_up2_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			curr_two = (curr_two + 1) % Widerstandcolors.twos.size()
-			twoSprite.texture = Widerstandcolors.twos[curr_two]
-			curr_2 = (curr_2 + 1) % Widerstandsdigits.twos.size()
-			twoDigit.texture = Widerstandsdigits.twos[curr_2]
-			
-			
-func _on_do2_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			for _i in range (Widerstandcolors.twos.size()-1,0,-1):
-				curr_two = (curr_two + 1) % Widerstandcolors.twos.size()
-				twoSprite.texture = Widerstandcolors.twos[curr_two]
-			for _i in range (Widerstandsdigits.twos.size()-1,0,-1):
-				curr_2 = (curr_2 + 1) % Widerstandsdigits.twos.size()
-				twoDigit.texture = Widerstandsdigits.twos[curr_2]
-			
-func _on_up2_mouse_entered():
-	$two/upS.scale = Vector2(1.1,1.1)
-func _on_up2_mouse_exited():
-	$two/upS.scale = Vector2(1,1)
-func _on_do2_mouse_entered():
-	$two/dowS.scale = Vector2(1.1,1.1)
-func _on_do2_mouse_exited():
-	$two/dowS.scale = Vector2(1,1)
+			colordown = get_node("c" + str(i) + "/down")
+			if curr_color[i] == 0:
+				curr_color[i] = 9
+			else:
+				curr_color[i] = (curr_color[i] - 1) % 10
+			if i == 3 and curr_color[i] >= cfours.size():
+				curr_color[i] = cfours.size() - 1
+			if i == 0:
+				get_node("colors/Sprite" + str(i)).texture = cones[curr_color[i]]
+			elif i == 1:
+				get_node("colors/Sprite" + str(i)).texture = ctwos[curr_color[i]]
+			elif i == 2:
+				get_node("colors/Sprite" + str(i)).texture = cthrees[curr_color[i]]
+			elif i == 3:
+				get_node("colors/Sprite" + str(i)).texture = cfours[curr_color[i]]
+			digitdown = get_node("d" + str(i) + "/down")
+			if curr_digit[i] == 0:
+				curr_digit[i] = 9
+			else:
+				curr_digit[i] = (curr_digit[i] - 1) % 10
+			if i == 3 and curr_digit[i] >= dfours.size():
+				curr_digit[i] = dfours.size() - 1
+			if i == 0:
+				get_node("digits/digit" + str(i)).texture = dones[curr_digit[i]]
+			elif i == 1:
+				get_node("digits/digit" + str(i)).texture = dtwos[curr_digit[i]]
+			elif i == 2:
+				get_node("digits/digit" + str(i)).texture = dthrees[curr_digit[i]]
+			elif i == 3:
+				get_node("digits/digit" + str(i)).texture = dfours[curr_digit[i]]
 
-func _on_up3_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			curr_three = (curr_three + 1) % Widerstandcolors.threes.size()
-			threeSprite.texture = Widerstandcolors.threes[curr_three]
-			curr_3 = (curr_3 + 1) % Widerstandsdigits.threes.size()
-			threeDigit.texture = Widerstandsdigits.threes[curr_3]
-				
-func _on_do3_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			for _i in range (Widerstandcolors.threes.size()-1,0,-1):
-				curr_three = (curr_three + 1) % Widerstandcolors.threes.size()
-				threeSprite.texture = Widerstandcolors.threes[curr_three]
-			for _i in range (Widerstandsdigits.threes.size()-1,0,-1):
-				curr_3 = (curr_3 + 1) % Widerstandsdigits.threes.size()
-				threeDigit.texture = Widerstandsdigits.threes[curr_3]
-				
-func _on_up3_mouse_entered():
-	$three/upS.scale = Vector2(1.1,1.1)
-func _on_up3_mouse_exited():
-	$three/upS.scale = Vector2(1,1)
-func _on_do3_mouse_entered():
-	$three/dowS.scale = Vector2(1.1,1.1)
-func _on_do3_mouse_exited():
-	$three/dowS.scale = Vector2(1,1)
+func _on_colorup_mouse_entered(i):
+	colorup = get_node("c" + str(i) + "/up")
+	colorup.scale = Vector2(1.1,1.1)
 
-func _on_up4_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			for _i in range (Widerstandcolors.fours.size()-1,0,-1):
-				curr_four = (curr_four + 1) % Widerstandcolors.fours.size()
-				fourSprite.texture = Widerstandcolors.fours[curr_four]
-			for _i in range (Widerstandsdigits.fours.size()-1,0,-1):
-				curr_4 = (curr_4+ 1) % Widerstandsdigits.fours.size()
-				fourDigit.texture = Widerstandsdigits.fours[curr_4]
-				
-func _on_do4_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			curr_four = (curr_four + 1) % Widerstandcolors.fours.size()
-			fourSprite.texture = Widerstandcolors.fours[curr_four]
-			curr_4 = (curr_4 + 1) % Widerstandsdigits.fours.size()
-			fourDigit.texture = Widerstandsdigits.fours[curr_4]
-			
-func _on_up4_mouse_entered():
-	$four/upS.scale = Vector2(1.1,1.1)
-func _on_up4_mouse_exited():
-	$four/upS.scale = Vector2(1,1)
-func _on_do4_mouse_entered():
-	$four/dowS.scale = Vector2(1.1,1.1)
-func _on_do4_mouse_exited():
-	$four/dowS.scale = Vector2(1,1)
+func _on_colorup_mouse_exited(i):
+	colorup = get_node("c" + str(i) + "/up")
+	colorup.scale = Vector2(1,1)
 
-func _on_upD_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			curr_1 = (curr_1 + 1) % Widerstandsdigits.ones.size()
-			oneDigit.texture = Widerstandsdigits.ones[curr_1]
-			curr_one = (curr_one + 1) % Widerstandcolors.ones.size()
-			oneSprite.texture = Widerstandcolors.ones[curr_one]
-			
-func _on_doD_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			for _i in range (Widerstandsdigits.ones.size()-1,0,-1):
-				curr_1 = (curr_1 + 1) % Widerstandsdigits.ones.size()
-				oneDigit.texture = Widerstandsdigits.ones[curr_1]
-			for _i in range (Widerstandcolors.ones.size()-1,0,-1):
-				curr_one = (curr_one + 1) % Widerstandcolors.ones.size()
-				oneSprite.texture = Widerstandcolors.ones[curr_one]	
-				
-func _on_doD_mouse_entered():
-	$one2/dowS.scale = Vector2(1.1,1.1)
-func _on_doD_mouse_exited():
-	$one2/dowS.scale = Vector2(1,1)
-func _on_upD_mouse_entered():
-	$one2/upS.scale = Vector2(1.1,1.1)
-func _on_upD_mouse_exited():
-	$one2/upS.scale = Vector2(1,1)
+func _on_colordown_mouse_entered(i):
+	colordown = get_node("c" + str(i) + "/down")
+	colordown.scale = Vector2(1.1,1.1)
 
+func _on_colordown_mouse_exited(i):
+	colordown = get_node("c" + str(i) + "/down")
+	colordown.scale = Vector2(1,1)
 
+func _on_digitup_mouse_entered(l):
+	digitup = get_node("d" + str(l) + "/up")
+	digitup.scale = Vector2(1.1,1.1)
 
+func _on_digitup_mouse_exited(l):
+	digitup = get_node("d" + str(l) + "/up")
+	digitup.scale = Vector2(1,1)
 
-func _on_upD2_mouse_entered():
-	$two2/upS.scale = Vector2(1.1,1.1)
+func _on_digitdown_mouse_entered(l):
+	digitdown = get_node("d" + str(l) + "/down")
+	digitdown.scale = Vector2(1.1,1.1)
 
-
-func _on_upD2_mouse_exited():
-	$two2/upS.scale = Vector2(1,1)
-
-
-func _on_doD2_mouse_entered():
-	$two2/dowS.scale = Vector2(1.1,1.1)
-
-
-func _on_doD2_mouse_exited():
-	$two2/dowS.scale = Vector2(1,1)
-
-
-func _on_upD3_mouse_entered():
-	$three2/upS.scale = Vector2(1.1,1.1)
-
-
-func _on_upD3_mouse_exited():
-	$three2/upS.scale = Vector2(1,1)
-
-
-func _on_doD3_mouse_entered():
-	$three2/dowS.scale = Vector2(1.1,1.1)
-
-
-func _on_doD3_mouse_exited():
-	$three2/dowS.scale = Vector2(1,1)
-
-
-func _on_upD4_mouse_entered():
-	$four2/upS.scale = Vector2(1.1,1.1)
-
-
-func _on_upD4_mouse_exited():
-	$four2/upS.scale = Vector2(1,1)
-
-
-func _on_doD4_mouse_entered():
-	$four2/dowS.scale = Vector2(1.1,1.1)
-
-
-func _on_doD4_mouse_exited():
-	$four2/dowS.scale = Vector2(1,1)
-
-
-func _on_Buttonlabel_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			get_tree().change_scene("res://scenes/Aufgabe_3.tscn")
-
-
-func _on_Buttonlabel_mouse_entered():
-	$ButtonClose/ButtonSprite.scale = Vector2(1.1,1.1)
-
-
-func _on_Buttonlabel_mouse_exited():
-	$ButtonClose/ButtonSprite.scale = Vector2(1,1)
+func _on_digitdown_mouse_exited(l):
+	digitdown = get_node("d" + str(l) + "/down")
+	digitdown.scale = Vector2(1,1)

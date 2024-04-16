@@ -1,63 +1,33 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var frame
+var task0
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	#$Frame/Try.visible = false
-	#$Frame/Exer.visible = false
-	#$Frame/Info.visible = false
-	pass
+	for i in range(3):
+		frame = get_node("frame" + str(i))
+		task0 = get_node("task" + str(i) )
+		frame.gui_input.connect(_on_gui_input.bind(i))
+		frame.mouse_entered.connect(_on_mouse_entered.bind(i))
+		frame.mouse_exited.connect(_on_mouse_exited.bind(i))
 
-
-
-func _on_try_gui_input(event):
+func _on_gui_input(event,i):
+	task0 = get_node("task" + str(i))
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:
-			$Frame/Try.visible = true
+			task0.visible = true
+
 			
 
-func _on_exer_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-				$Frame2/Exer.visible = true
-			
-			
+func _on_mouse_entered(i):
+	frame = get_node("frame" + str(i))
+	frame.scale = Vector2(2.2,2.2)
 
-
-func _on_info_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == 1:
-			$Frame3/Info.visible = true
-			
-
-func _on_try_mouse_entered():
-	$Frame/try.scale  = Vector2(1.1,1.1)
-
-
-func _on_try_mouse_exited():
-	$Frame/try.scale = Vector2(1,1)
-
-
-func _on_info_mouse_entered():
-	$Frame3/info.scale = Vector2(1.1,1.1)
-
-
-func _on_info_mouse_exited():
-	$Frame3/info.scale = Vector2(1,1)
-
-
-func _on_exer_mouse_entered():
-	$Frame2/exer.scale = Vector2(1.1,1.1)
-
-
-func _on_exer_mouse_exited():
-	$Frame2/exer.scale = Vector2(1,1)
-
+func _on_mouse_exited(i):
+	frame = get_node("frame" + str(i))
+	frame.scale = Vector2(2, 2)
 
 func _on_widertry_gui_input(event):
 	if event is InputEventMouseButton:
