@@ -1,9 +1,0 @@
-res://scenes/Main.tscn
-res://scenes/AufgabeBase.tscn
-res://scenes/ButtonBack2.tscn
-res://scenes/ButtonBack.tscn
-res://scenes/ButtonClose.tscn
-res://scenes/ButtonNext.tscn
-res://scenes/Widerstand.tscn
-res://scenes/Zuordnungsaufgabe.tscn
-res://scripts/Widerstand.gd

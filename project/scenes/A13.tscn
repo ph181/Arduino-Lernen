@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://0xs6p52d5xi5"]
+
+[ext_resource type="PackedScene" uid="uid://05baa6d7gub5" path="res://scenes/AufgabeBase.tscn" id="1_vrs4s"]
+[ext_resource type="Texture2D" uid="uid://5v3xh4wf62c4" path="res://sprite/a13/rgbschalt.png" id="2_adgne"]
+
+[node name="A13" instance=ExtResource("1_vrs4s")]
+
+[node name="label" parent="title" index="0"]
+text = "RGB LEDs"
+
+[node name="Label" parent="task0" index="0"]
+text = "Anschlüsse der RGB LED"
+
+[node name="Label2" parent="task0" index="1"]
+text = "Finde heraus, welcher der anderen Anschlüsse für welche Farbe ist und schließe die LED an. Welche Mischfarben ergeben sich, wenn rot und grün, rot und blau, grün und blau sowie alle drei LEDs an sind?"
+
+[node name="Sprite" parent="task0" index="3"]
+visible = false
+
+[node name="Label" parent="task0/ButtonNext/task00" index="0"]
+text = "Mehr Farbkombinationen"
+
+[node name="Label2" parent="task0/ButtonNext/task00" index="1"]
+offset_left = 99.0
+offset_top = 202.0
+offset_right = 1779.0
+offset_bottom = 418.0
+text = "Weitere Farbkombinationen ergeben sich, wenn man die Farbei mit analogWrite() gedimmt mischt. Schreibe ein Programm, das alle überhaupt möglichen Farbkombinationen anzeigt, also 256*256*256 = 16777216 Farben. Dafür brauchst du etwa drei for-Schleifen ineinander."
+
+[node name="Sprite" parent="task0/ButtonNext/task00" index="3"]
+visible = false
+
+[node name="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="0"]
+text = "Mehr Farbkombinationen"
+
+[node name="Label2" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="1"]
+text = "Weitere Farbkombinationen ergeben sich, wenn man die Farbei mit analogWrite() gedimmt mischt. Schreibe ein Programm, das alle überhaupt möglichen Farbkombinationen anzeigt, also 256*256*256 = 16777216 Farben. Dafür brauchst du etwa drei for-Schleifen ineinander."
+
+[node name="Sprite" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="3"]
+visible = false
+
+[node name="Label" parent="task1" index="0"]
+offset_left = 97.0
+offset_top = 13.0
+offset_right = 1738.0
+offset_bottom = 150.0
+text = "Suche die Tippfehler, was wird das Programm machen?"
+autowrap_mode = 2
+
+[node name="Label2" parent="task1" index="1"]
+visible = false
+
+[node name="Label3" parent="task1" index="2"]
+visible = true
+offset_left = 575.0
+offset_bottom = 919.0
+text = "void setup();
+{
+Serial.begin(900);
+}
+void loop{
+for (int i = 0; i<10; i = i+1){
+Serial.println(\"huhu\");
+for (u=0,u<100,u=u+1){
+Serial.print(i);
+Serial.print(u);
+Serial.print(\",\");
+}
+}"
+
+[node name="Sprite" parent="task1" index="3"]
+visible = false
+
+[node name="Label" parent="task2" index="0"]
+text = "RGB LEDs"
+
+[node name="Label2" parent="task2" index="1"]
+text = "Eine RGB LED beinhaltet drei Leuchtdioden in den Farben rot, grün und blau (RGB) in einem gehäuse mit gemeinsamen Minuspol. Die Schaltung rechts zeigt dir, wie eine solche Leuchtdiode angeschlossen werden kann. Der Minuspol ist meist das längste Beinchen."
+
+[node name="Sprite" parent="task2" index="3"]
+position = Vector2(966, 705)
+scale = Vector2(2.39452, 2.39452)
+texture = ExtResource("2_adgne")

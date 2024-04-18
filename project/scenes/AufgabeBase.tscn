@@ -1,0 +1,597 @@
+[gd_scene load_steps=17 format=3 uid="uid://05baa6d7gub5"]
+
+[ext_resource type="Script" path="res://scripts/Base.gd" id="1_eibsg"]
+[ext_resource type="Texture2D" uid="uid://dxesaj08nynda" path="res://sprite/standard.png" id="2_yrgtw"]
+[ext_resource type="Texture2D" uid="uid://xplooqgyhlw1" path="res://sprite/try.png" id="3_ldr52"]
+[ext_resource type="FontFile" uid="uid://bpy323havmp2c" path="res://fonts/Terminal-Grotesque-master/font.ttf" id="4_k1kly"]
+[ext_resource type="Texture2D" uid="uid://d4gpvavxu7d5u" path="res://sprite/aufgabe.png" id="5_efb8i"]
+[ext_resource type="PackedScene" uid="uid://cuqbwmgdnlkib" path="res://scenes/ButtonNext.tscn" id="6_bjh77"]
+[ext_resource type="Texture2D" uid="uid://8i1ccjy5ppk6" path="res://sprite/a1/tink2.png" id="7_f2at0"]
+[ext_resource type="PackedScene" uid="uid://buo4045ii5gj8" path="res://scenes/ButtonBack2.tscn" id="11_a7ry1"]
+[ext_resource type="Texture2D" uid="uid://qs0be668vuex" path="res://sprite/a1/tink3.png" id="12_v3mxs"]
+[ext_resource type="Texture2D" uid="uid://cbtyp01b7nf1p" path="res://sprite/exer.png" id="14_cpgby"]
+[ext_resource type="Script" path="res://scripts/ButtonNext2.gd" id="15_c4v8r"]
+[ext_resource type="Texture2D" uid="uid://cah4vca5mxd1w" path="res://sprite/info.png" id="16_fucxd"]
+[ext_resource type="PackedScene" uid="uid://bpase6c7wmsbx" path="res://scenes/ButtonClose.tscn" id="16_px65t"]
+[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/ButtonBack.tscn" id="18_ay36n"]
+[ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="19_j3lga"]
+[ext_resource type="FontFile" uid="uid://s6087bmqv6uy" path="res://fonts/Terminal-Grotesque-master/title.otf" id="21_bqan0"]
+
+[node name="aufgabeBase" type="Node2D"]
+script = ExtResource("1_eibsg")
+
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(3.17833, 2.695)
+texture = ExtResource("2_yrgtw")
+centered = false
+
+[node name="ButtonBack" parent="." instance=ExtResource("18_ay36n")]
+position = Vector2(255, 987)
+scale = Vector2(1, 1)
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(922, 146)
+scale = Vector2(3, 3)
+texture = ExtResource("19_j3lga")
+
+[node name="label" type="Label" parent="title"]
+offset_left = -192.0
+offset_top = -40.0
+offset_right = 195.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 30
+text = "Der Arduino - 
+Hardware und Software"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="frame0" type="TextureRect" parent="."]
+offset_left = 95.0
+offset_top = 354.0
+offset_right = 338.0
+offset_bottom = 582.0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
+texture = ExtResource("3_ldr52")
+
+[node name="label" type="Label" parent="frame0"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 184.0
+offset_right = 235.0
+offset_bottom = 219.0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 32
+text = "probieren"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="frame1" type="TextureRect" parent="."]
+offset_left = 719.0
+offset_top = 347.0
+offset_right = 968.0
+offset_bottom = 577.0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
+texture = ExtResource("14_cpgby")
+
+[node name="label" type="Label" parent="frame1"]
+layout_mode = 0
+offset_left = 10.5
+offset_top = 182.5
+offset_right = 237.5
+offset_bottom = 217.5
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 32
+text = "prüfen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="frame2" type="TextureRect" parent="."]
+offset_left = 1329.0
+offset_top = 340.0
+offset_right = 1580.0
+offset_bottom = 576.0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
+texture = ExtResource("16_fucxd")
+
+[node name="label" type="Label" parent="frame2"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 194.5
+offset_right = 239.0
+offset_bottom = 229.5
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 32
+text = "lesen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="task0" type="TextureRect" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 1910.0
+offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task0"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task0"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 217.0
+offset_right = 1781.0
+offset_bottom = 456.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="task0"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 217.0
+offset_right = 1781.0
+offset_bottom = 456.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task0"]
+position = Vector2(916, 689)
+scale = Vector2(1.07282, 1.07282)
+texture = ExtResource("7_f2at0")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="task0"]
+visible = false
+
+[node name="ButtonNext" parent="task0" instance=ExtResource("6_bjh77")]
+position = Vector2(1660, 997)
+scale = Vector2(1, 1)
+
+[node name="task00" type="TextureRect" parent="task0/ButtonNext"]
+visible = false
+offset_left = -1662.0
+offset_top = -998.0
+offset_right = 251.0
+offset_bottom = 81.0
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task0/ButtonNext/task00"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task0/ButtonNext/task00"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="task0/ButtonNext/task00"]
+visible = false
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task0/ButtonNext/task00"]
+position = Vector2(1011, 585)
+scale = Vector2(0.727597, 0.727597)
+texture = ExtResource("12_v3mxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="task0/ButtonNext/task00"]
+visible = false
+
+[node name="ButtonBack2" parent="task0/ButtonNext/task00" instance=ExtResource("11_a7ry1")]
+position = Vector2(247, 997)
+scale = Vector2(1, 1)
+
+[node name="ButtonNext2" parent="task0/ButtonNext/task00" instance=ExtResource("6_bjh77")]
+position = Vector2(1662, 998)
+scale = Vector2(1, 1)
+script = ExtResource("15_c4v8r")
+
+[node name="task00" type="TextureRect" parent="task0/ButtonNext/task00/ButtonNext2"]
+visible = false
+offset_left = -1662.0
+offset_top = -998.0
+offset_right = 251.0
+offset_bottom = 81.0
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00"]
+visible = false
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task0/ButtonNext/task00/ButtonNext2/task00"]
+position = Vector2(1011, 585)
+scale = Vector2(0.727597, 0.727597)
+texture = ExtResource("12_v3mxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="task0/ButtonNext/task00/ButtonNext2/task00"]
+
+[node name="ButtonBack2" parent="task0/ButtonNext/task00/ButtonNext2/task00" instance=ExtResource("11_a7ry1")]
+position = Vector2(247, 997)
+scale = Vector2(1, 1)
+
+[node name="ButtonNext3" parent="task0/ButtonNext/task00/ButtonNext2/task00" instance=ExtResource("6_bjh77")]
+visible = false
+position = Vector2(1662, 998)
+scale = Vector2(1, 1)
+script = ExtResource("15_c4v8r")
+
+[node name="task00" type="TextureRect" parent="task0/ButtonNext/task00/ButtonNext2/task00/ButtonNext3"]
+visible = false
+offset_left = -1662.0
+offset_top = -998.0
+offset_right = 251.0
+offset_bottom = 81.0
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00/ButtonNext3/task00"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00/ButtonNext3/task00"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task0/ButtonNext/task00/ButtonNext2/task00/ButtonNext3/task00"]
+position = Vector2(1011, 585)
+scale = Vector2(0.727597, 0.727597)
+texture = ExtResource("12_v3mxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="task0/ButtonNext/task00/ButtonNext2/task00/ButtonNext3/task00"]
+
+[node name="ButtonBack2" parent="task0/ButtonNext/task00/ButtonNext2/task00/ButtonNext3/task00" instance=ExtResource("11_a7ry1")]
+position = Vector2(247, 997)
+scale = Vector2(1, 1)
+
+[node name="ButtonClose" parent="task0" instance=ExtResource("16_px65t")]
+position = Vector2(1806, 82)
+scale = Vector2(1, 1)
+
+[node name="task1" type="TextureRect" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 1910.0
+offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task1"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task1"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 217.0
+offset_right = 1781.0
+offset_bottom = 456.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="task1"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 217.0
+offset_right = 1781.0
+offset_bottom = 456.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task1"]
+position = Vector2(916, 689)
+scale = Vector2(1.07282, 1.07282)
+texture = ExtResource("7_f2at0")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="task1"]
+visible = false
+
+[node name="ButtonNext" parent="task1" instance=ExtResource("6_bjh77")]
+visible = false
+position = Vector2(1660, 997)
+scale = Vector2(1, 1)
+
+[node name="task00" type="TextureRect" parent="task1/ButtonNext"]
+visible = false
+offset_left = -1662.0
+offset_top = -998.0
+offset_right = 251.0
+offset_bottom = 81.0
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task1/ButtonNext/task00"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task1/ButtonNext/task00"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="task1/ButtonNext/task00"]
+visible = false
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task1/ButtonNext/task00"]
+position = Vector2(1011, 585)
+scale = Vector2(0.727597, 0.727597)
+texture = ExtResource("12_v3mxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="task1/ButtonNext/task00"]
+
+[node name="ButtonBack2" parent="task1/ButtonNext/task00" instance=ExtResource("11_a7ry1")]
+position = Vector2(247, 997)
+scale = Vector2(1, 1)
+
+[node name="ButtonClose" parent="task1" instance=ExtResource("16_px65t")]
+position = Vector2(1806, 82)
+scale = Vector2(1, 1)
+
+[node name="task2" type="TextureRect" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 1910.0
+offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task2"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task2"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 217.0
+offset_right = 1781.0
+offset_bottom = 456.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="task2"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 217.0
+offset_right = 1781.0
+offset_bottom = 456.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task2"]
+position = Vector2(916, 689)
+scale = Vector2(1.07282, 1.07282)
+texture = ExtResource("7_f2at0")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="task2"]
+visible = false
+
+[node name="ButtonNext" parent="task2" instance=ExtResource("6_bjh77")]
+visible = false
+position = Vector2(1660, 997)
+scale = Vector2(1, 1)
+
+[node name="task00" type="TextureRect" parent="task2/ButtonNext"]
+visible = false
+offset_left = -1662.0
+offset_top = -998.0
+offset_right = 251.0
+offset_bottom = 81.0
+texture = ExtResource("5_efb8i")
+
+[node name="Label" type="Label" parent="task2/ButtonNext/task00"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 1630.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("21_bqan0")
+theme_override_font_sizes/font_size = 78
+text = "TinkerCAD einrichten"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="task2/ButtonNext/task00"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 149.0
+offset_right = 1776.0
+offset_bottom = 308.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_k1kly")
+theme_override_font_sizes/font_size = 50
+text = "Rufe den Link auf, der in Moodle hinterlegt ist und melde dich mit deinem Vornamen mit kleinem Anfangsbuchstaben an."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="task2/ButtonNext/task00"]
+position = Vector2(1011, 585)
+scale = Vector2(0.727597, 0.727597)
+texture = ExtResource("12_v3mxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="task2/ButtonNext/task00"]
+
+[node name="ButtonBack2" parent="task2/ButtonNext/task00" instance=ExtResource("11_a7ry1")]
+position = Vector2(247, 997)
+scale = Vector2(1, 1)
+
+[node name="ButtonClose" parent="task2" instance=ExtResource("16_px65t")]
+position = Vector2(1806, 82)
+scale = Vector2(1, 1)

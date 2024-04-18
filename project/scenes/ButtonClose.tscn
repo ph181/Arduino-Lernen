@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpase6c7wmsbx"]
+
+[ext_resource type="Texture2D" uid="uid://b5g0ih0pqjrji" path="res://sprite/close.png" id="2"]
+[ext_resource type="Script" path="res://scripts/ButtonClose.gd" id="3"]
+[ext_resource type="FontFile" uid="uid://bpy323havmp2c" path="res://fonts/Terminal-Grotesque-master/font.ttf" id="3_dha67"]
+
+[node name="ButtonClose" type="Node2D"]
+position = Vector2(574, 29)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("3")
+
+[node name="ButtonSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+
+[node name="Buttonlabel" type="Label" parent="ButtonSprite"]
+offset_left = -42.0
+offset_top = -50.0
+offset_right = 49.0
+offset_bottom = 43.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_dha67")
+theme_override_font_sizes/font_size = 86
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="ButtonSprite/Buttonlabel" to="." method="_on_buttonlabel_gui_input"]
+[connection signal="mouse_entered" from="ButtonSprite/Buttonlabel" to="." method="_on_buttonlabel_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonSprite/Buttonlabel" to="." method="_on_buttonlabel_mouse_exited"]

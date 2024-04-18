@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://btduh2lo75pui"]
+
+[ext_resource type="PackedScene" uid="uid://05baa6d7gub5" path="res://scenes/AufgabeBase.tscn" id="1_s1oyy"]
+[ext_resource type="Texture2D" uid="uid://bpec05rh2byhc" path="res://sprite/a5/ex1.png" id="2_821rl"]
+[ext_resource type="Texture2D" uid="uid://ct1cji3i8obkl" path="res://sprite/a5/ex2.png" id="3_jntyf"]
+[ext_resource type="Texture2D" uid="uid://bcgyqu0d3q1d0" path="res://sprite/a5/ex3.png" id="4_dsamq"]
+[ext_resource type="Texture2D" uid="uid://kegvgxvbq300" path="res://sprite/a5/ex4.png" id="5_n62fh"]
+[ext_resource type="Texture2D" uid="uid://74hvjoth7rxe" path="res://sprite/a4/LED.png" id="6_e0upb"]
+
+[node name="A4" instance=ExtResource("1_s1oyy")]
+
+[node name="label" parent="title" index="0"]
+text = "LEDs"
+
+[node name="Label" parent="task0" index="0"]
+text = "LED Schaltungen"
+
+[node name="Label2" parent="task0" index="1"]
+text = "Teste unter TinkerCAD, welche Möglichkeiten es gibt 5 LEDs mit nur einem Widerstand zu verbinden."
+
+[node name="Sprite" parent="task0" index="3"]
+visible = false
+
+[node name="ButtonNext" parent="task0" index="5"]
+visible = false
+
+[node name="Label" parent="task1" index="0"]
+text = "LEDs"
+
+[node name="Label2" parent="task1" index="1"]
+text = "In welchen Schaltungen  wird die LED leuchten? Probiere es aus!"
+
+[node name="Ex1" type="Sprite2D" parent="task1" index="2"]
+position = Vector2(317, 594)
+scale = Vector2(2, 2)
+texture = ExtResource("2_821rl")
+
+[node name="Ex2" type="Sprite2D" parent="task1" index="3"]
+position = Vector2(716, 595)
+scale = Vector2(2, 2)
+texture = ExtResource("3_jntyf")
+
+[node name="Ex3" type="Sprite2D" parent="task1" index="4"]
+position = Vector2(1108, 601)
+scale = Vector2(2, 2)
+texture = ExtResource("4_dsamq")
+
+[node name="Ex4" type="Sprite2D" parent="task1" index="5"]
+position = Vector2(1474, 604)
+scale = Vector2(2, 2)
+texture = ExtResource("5_n62fh")
+
+[node name="Sprite" parent="task1" index="7"]
+visible = false
+texture = ExtResource("6_e0upb")
+
+[node name="Label" parent="task2" index="0"]
+text = "LEDs"
+
+[node name="Label2" parent="task2" index="1"]
+text = "Eine LED besteht aus einem Halbleiterkristall, einer Anode (-), einer Kathode(+) und einer Kunststofflinse.
+Der Halbleiterkristall erzeugt Licht mittels physikalischer Prozesse. Die LED muss immer in der richtigen Richtung eingebaut werden, das lange Beinchen ist die Plus-Seite und muss mit dem Plus-Pol verbunden werden. Das kurze Beinchen geht an GND. Eine LED muss immer mit einem Widerstand in Reihe geschalten sein, da sie sonst kaputt geht."
+
+[node name="Sprite" parent="task2" index="3"]
+position = Vector2(888.152, 782.544)
+scale = Vector2(2.58641, 2.58641)
+texture = ExtResource("6_e0upb")

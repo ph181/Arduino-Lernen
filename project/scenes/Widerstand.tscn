@@ -1,0 +1,223 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfrq8pxh0tiyg"]
+
+[ext_resource type="Script" path="res://scripts/Widerstand.gd" id="1_vfc0i"]
+[ext_resource type="Texture2D" uid="uid://dtwcdc1go7d7i" path="res://sprite/switch.png" id="2_pgd80"]
+[ext_resource type="Texture2D" uid="uid://cq45u3k5b8bpw" path="res://sprite/switchD.png" id="3_yo07e"]
+[ext_resource type="Texture2D" uid="uid://cif73t2gf6bql" path="res://sprite/a3/unit.png" id="4_w6yfa"]
+
+[node name="Widerstand" type="Node2D"]
+script = ExtResource("1_vfc0i")
+
+[node name="colors" type="Node2D" parent="."]
+
+[node name="Sprite0" type="Sprite2D" parent="colors"]
+position = Vector2(67, 340)
+
+[node name="Sprite1" type="Sprite2D" parent="colors"]
+position = Vector2(117, 340)
+
+[node name="Sprite2" type="Sprite2D" parent="colors"]
+position = Vector2(167, 340)
+
+[node name="Sprite3" type="Sprite2D" parent="colors"]
+position = Vector2(216, 340)
+
+[node name="c0" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
+[node name="up" type="TextureRect" parent="c0"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 300.0
+offset_right = 50.0
+offset_bottom = 300.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="c0"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 360.0
+offset_right = 50.0
+offset_bottom = 360.0
+texture = ExtResource("3_yo07e")
+
+[node name="c1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="up" type="TextureRect" parent="c1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 300.0
+offset_right = 100.0
+offset_bottom = 300.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="c1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 360.0
+offset_right = 100.0
+offset_bottom = 360.0
+texture = ExtResource("3_yo07e")
+
+[node name="c2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="up" type="TextureRect" parent="c2"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 300.0
+offset_right = 150.0
+offset_bottom = 300.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="c2"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 360.0
+offset_right = 150.0
+offset_bottom = 360.0
+texture = ExtResource("3_yo07e")
+
+[node name="c3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="up" type="TextureRect" parent="c3"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 300.0
+offset_right = 200.0
+offset_bottom = 300.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="c3"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 360.0
+offset_right = 200.0
+offset_bottom = 360.0
+texture = ExtResource("3_yo07e")
+
+[node name="digits" type="Node2D" parent="."]
+
+[node name="digit0" type="Sprite2D" parent="digits"]
+position = Vector2(312, 342)
+
+[node name="digit1" type="Sprite2D" parent="digits"]
+position = Vector2(362, 342)
+
+[node name="digit2" type="Sprite2D" parent="digits"]
+position = Vector2(412, 342)
+
+[node name="digit3" type="Sprite2D" parent="digits"]
+position = Vector2(462, 342)
+
+[node name="d0" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -11.0
+offset_right = -4.0
+offset_bottom = -11.0
+mouse_default_cursor_shape = 2
+
+[node name="up" type="TextureRect" parent="d0"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 312.0
+offset_right = 300.0
+offset_bottom = 312.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="d0"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 372.0
+offset_right = 300.0
+offset_bottom = 372.0
+texture = ExtResource("3_yo07e")
+
+[node name="d1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -11.0
+offset_right = -4.0
+offset_bottom = -11.0
+mouse_default_cursor_shape = 2
+
+[node name="up" type="TextureRect" parent="d1"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 312.0
+offset_right = 350.0
+offset_bottom = 312.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="d1"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 372.0
+offset_right = 350.0
+offset_bottom = 372.0
+texture = ExtResource("3_yo07e")
+
+[node name="d2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -11.0
+offset_right = -4.0
+offset_bottom = -11.0
+mouse_default_cursor_shape = 2
+
+[node name="up" type="TextureRect" parent="d2"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 312.0
+offset_right = 400.0
+offset_bottom = 312.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="d2"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 372.0
+offset_right = 400.0
+offset_bottom = 372.0
+texture = ExtResource("3_yo07e")
+
+[node name="d3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -11.0
+offset_right = -4.0
+offset_bottom = -11.0
+mouse_default_cursor_shape = 2
+
+[node name="up" type="TextureRect" parent="d3"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 312.0
+offset_right = 450.0
+offset_bottom = 312.0
+texture = ExtResource("2_pgd80")
+
+[node name="down" type="TextureRect" parent="d3"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 372.0
+offset_right = 450.0
+offset_bottom = 372.0
+texture = ExtResource("3_yo07e")
+
+[node name="Unit" type="Sprite2D" parent="."]
+position = Vector2(517, 341)
+texture = ExtResource("4_w6yfa")
