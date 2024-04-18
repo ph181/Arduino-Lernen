@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713345805
-export_presets.cfg::TextFile::-1::1713344903::0::1::::<><>::
+::res://::1713450835
+export_presets.cfg::TextFile::-1::1713346457::0::1::::<><>::
 icon.png::CompressedTexture2D::268073120360860005::1712945557::1713345123::1::::<><>::
 ::res://fonts/::1712946784
 ::res://fonts/Terminal-Grotesque-master/::1713345120
@@ -28,7 +28,8 @@ samuelriversmoore-partipirate1.jpg::CompressedTexture2D::3556410161041314759::17
 samuelriversmoore-partipirate2.jpg::CompressedTexture2D::5483412948595319040::1709670510::1713345126::1::::<><>::
 samuelriversmoore-partipirate.png::CompressedTexture2D::4685663844408766088::1709670510::1713345125::1::::<><>::
 TomKracauer.jpg::CompressedTexture2D::8526959028205008245::1709670510::1713345126::1::::<><>::
-::res://scenes/::1713346109
+::res://scenes/::1713346183
+A0.tscn::PackedScene::6254487990029787609::1713280386::0::1::::<><>::uid://05baa6d7gub5::::res://scenes/AufgabeBase.tscn<>uid://cxympc67o3o58::::res://sprite/18/Sprite-0001.png<>uid://dl2x0w48u4hyx::::res://sprite/18/Screenshot 2024-04-16 161416.png
 A1.tscn::PackedScene::7784113085144106472::1713280979::0::1::::<><>::uid://05baa6d7gub5
 A2.tscn::PackedScene::5382430103670504229::1713278830::0::1::::<><>::uid://05baa6d7gub5
 A3.tscn::PackedScene::3817083203323139393::1713278868::0::1::::<><>::uid://05baa6d7gub5
@@ -46,15 +47,14 @@ A14.tscn::PackedScene::316163200192010803::1713280156::0::1::::<><>::uid://05baa
 A15.tscn::PackedScene::1372633633010271178::1713280189::0::1::::<><>::uid://05baa6d7gub5
 A16.tscn::PackedScene::2341498349392262805::1713280285::0::1::::<><>::uid://05baa6d7gub5
 A17.tscn::PackedScene::8737827136771627297::1713280363::0::1::::<><>::uid://05baa6d7gub5
-A18.tscn::PackedScene::6254487990029787609::1713280386::0::1::::<><>::uid://05baa6d7gub5
-AufgabeBase.tscn::PackedScene::1816713188633634272::1713346108::0::1::::<><>::res://scripts/Base.gd<>uid://dxesaj08nynda::::res://sprite/standard.png<>uid://xplooqgyhlw1::::res://sprite/try.png<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://d4gpvavxu7d5u::::res://sprite/aufgabe.png<>uid://cuqbwmgdnlkib::::res://scenes/ButtonNext.tscn<>uid://8i1ccjy5ppk6::::res://sprite/a1/tink2.png<>uid://buo4045ii5gj8::::res://scenes/ButtonBack2.tscn<>uid://qs0be668vuex::::res://sprite/a1/tink3.png<>uid://cbtyp01b7nf1p::::res://sprite/exer.png<>res://scripts/ButtonNext2.gd<>uid://cah4vca5mxd1w::::res://sprite/info.png<>uid://bpase6c7wmsbx::::res://scenes/ButtonClose.tscn<>uid://c2ij3ofp8tbjf::::res://scenes/ButtonBack.tscn<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
-ButtonBack2.tscn::PackedScene::3820905852545082587::1713346109::0::1::::<><>::res://scripts/ButtonBack2.gd<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
-ButtonBack.tscn::PackedScene::6685052366587092739::1713346109::0::1::::<><>::res://scripts/ButtonBack.gd<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
-ButtonClose.tscn::PackedScene::3440355020106291521::1713346109::0::1::::<><>::uid://b5g0ih0pqjrji::::res://sprite/close.png<>res://scripts/ButtonClose.gd<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf
-ButtonNext.tscn::PackedScene::6209748928373631425::1713346109::0::1::::<><>::uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>res://scripts/ButtonNext.gd<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
-Main.tscn::PackedScene::5116349183901397585::1713346108::0::1::::<><>::uid://8wfqmhgahh2a::::res://sprite/BG.png<>res://scripts/Main.gd<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>res://scripts/Beenden.gd<>uid://yl7mbw28nays::::res://sprite/beenden.png
-Widerstand.tscn::PackedScene::2773490550518371102::1713346109::0::1::::<><>::res://scripts/Widerstand.gd<>uid://dtwcdc1go7d7i::::res://sprite/switch.png<>uid://cq45u3k5b8bpw::::res://sprite/switchD.png<>uid://cif73t2gf6bql::::res://sprite/a3/unit.png
-Zuordnungsaufgabe.tscn::PackedScene::6682387185446131325::1713346109::0::1::::<><>::res://scripts/Zuordnungsaufgabe.gd<>uid://ciu3u0mixwc80::::res://sprite/a5/Arduino.png<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://ccw0n3wfx483q::::res://sprite/a5/wrong.png<>uid://dc7udkok88svh::::res://sprite/a5/corr.png<>res://scripts/Antworten.gd<>uid://cfrxr75fhyrv7::::res://sprite/a5/buttone.png
+AufgabeBase.tscn::PackedScene::1816713188633634272::1713346183::0::1::::<><>::res://scripts/Base.gd<>uid://dxesaj08nynda::::res://sprite/standard.png<>uid://xplooqgyhlw1::::res://sprite/try.png<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://d4gpvavxu7d5u::::res://sprite/aufgabe.png<>uid://cuqbwmgdnlkib::::res://scenes/ButtonNext.tscn<>uid://8i1ccjy5ppk6::::res://sprite/a1/tink2.png<>uid://buo4045ii5gj8::::res://scenes/ButtonBack2.tscn<>uid://qs0be668vuex::::res://sprite/a1/tink3.png<>uid://cbtyp01b7nf1p::::res://sprite/exer.png<>res://scripts/ButtonNext2.gd<>uid://cah4vca5mxd1w::::res://sprite/info.png<>uid://bpase6c7wmsbx::::res://scenes/ButtonClose.tscn<>uid://c2ij3ofp8tbjf::::res://scenes/ButtonBack.tscn<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
+ButtonBack2.tscn::PackedScene::3820905852545082587::1713346183::0::1::::<><>::res://scripts/ButtonBack2.gd<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
+ButtonBack.tscn::PackedScene::6685052366587092739::1713346183::0::1::::<><>::res://scripts/ButtonBack.gd<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
+ButtonClose.tscn::PackedScene::3440355020106291521::1713346183::0::1::::<><>::uid://b5g0ih0pqjrji::::res://sprite/close.png<>res://scripts/ButtonClose.gd<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf
+ButtonNext.tscn::PackedScene::6209748928373631425::1713346183::0::1::::<><>::uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>res://scripts/ButtonNext.gd<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf
+Main.tscn::PackedScene::5116349183901397585::1713346183::0::1::::<><>::uid://8wfqmhgahh2a::::res://sprite/BG.png<>res://scripts/Main.gd<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>res://scripts/Beenden.gd<>uid://yl7mbw28nays::::res://sprite/beenden.png
+Widerstand.tscn::PackedScene::2773490550518371102::1713346183::0::1::::<><>::res://scripts/Widerstand.gd<>uid://dtwcdc1go7d7i::::res://sprite/switch.png<>uid://cq45u3k5b8bpw::::res://sprite/switchD.png<>uid://cif73t2gf6bql::::res://sprite/a3/unit.png
+Zuordnungsaufgabe.tscn::PackedScene::6682387185446131325::1713346183::0::1::::<><>::res://scripts/Zuordnungsaufgabe.gd<>uid://ciu3u0mixwc80::::res://sprite/a5/Arduino.png<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://ccw0n3wfx483q::::res://sprite/a5/wrong.png<>uid://dc7udkok88svh::::res://sprite/a5/corr.png<>res://scripts/Antworten.gd<>uid://cfrxr75fhyrv7::::res://sprite/a5/buttone.png
 ::res://scripts/::1713346082
 Antworten.gd::GDScript::-1::1713263125::0::1::::<>CharacterBody2D<>::
 Base.gd::GDScript::-1::1713198721::0::1::::<>Node2D<>::
