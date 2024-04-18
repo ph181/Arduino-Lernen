@@ -64,9 +64,9 @@ func _on_up_gui_input(event,i):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:
 			colorup = get_node("c" + str(i) + "/up")
-			curr_color[i] = (curr_color[i] + 1) % 10 # Erhöhen Sie den Index und wickeln Sie ihn um, wenn er 10 erreicht
+			curr_color[i] = (curr_color[i] + 1) % 10
 			if i == 0:
-				get_node("colors/Sprite" + str(i)).texture = cones[curr_color[i]] # Ändern Sie die Textur basierend auf dem aktuellen Index
+				get_node("colors/Sprite" + str(i)).texture = cones[curr_color[i]]
 			elif i == 1:
 				get_node("colors/Sprite" + str(i)).texture = ctwos[curr_color[i]]
 			elif i == 2:
@@ -76,7 +76,7 @@ func _on_up_gui_input(event,i):
 					curr_color[i] = cfours.size() - 1
 				get_node("colors/Sprite" + str(i)).texture = cfours[curr_color[i]]
 			digitup = get_node("d" + str(i) + "/up")
-			curr_digit[i] = (curr_digit[i] + 1) % 10 # Erhöhen Sie den Index und wickeln Sie ihn um, wenn er 10 erreicht
+			curr_digit[i] = (curr_digit[i] + 1) % 10
 			if i == 0:
 				get_node("digits/digit" + str(i)).texture = dones[curr_digit[i]]
 			elif i == 1:
@@ -92,13 +92,8 @@ func _on_up_gui_input(event,i):
 func _on_down_gui_input(event,i):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:
-			colordown = get_node("c" + str(i) + "/down")
-			if curr_color[i] == 0:
-				curr_color[i] = 9
-			else:
-				curr_color[i] = (curr_color[i] - 1) % 10
-			if i == 3 and curr_color[i] >= cfours.size():
-				curr_color[i] = cfours.size() - 1
+			colorup = get_node("c" + str(i) + "/up")
+			curr_color[i] = (curr_color[i] - 1+10) % 10
 			if i == 0:
 				get_node("colors/Sprite" + str(i)).texture = cones[curr_color[i]]
 			elif i == 1:
@@ -106,14 +101,11 @@ func _on_down_gui_input(event,i):
 			elif i == 2:
 				get_node("colors/Sprite" + str(i)).texture = cthrees[curr_color[i]]
 			elif i == 3:
+				if curr_color[i] >= cfours.size():
+					curr_color[i] = cfours.size() - 1
 				get_node("colors/Sprite" + str(i)).texture = cfours[curr_color[i]]
-			digitdown = get_node("d" + str(i) + "/down")
-			if curr_digit[i] == 0:
-				curr_digit[i] = 9
-			else:
-				curr_digit[i] = (curr_digit[i] - 1) % 10
-			if i == 3 and curr_digit[i] >= dfours.size():
-				curr_digit[i] = dfours.size() - 1
+			digitup = get_node("d" + str(i) + "/up")
+			curr_digit[i] = (curr_digit[i] - 1+10) % 10
 			if i == 0:
 				get_node("digits/digit" + str(i)).texture = dones[curr_digit[i]]
 			elif i == 1:
@@ -121,7 +113,10 @@ func _on_down_gui_input(event,i):
 			elif i == 2:
 				get_node("digits/digit" + str(i)).texture = dthrees[curr_digit[i]]
 			elif i == 3:
+				if curr_digit[i] >= dfours.size():
+					curr_digit[i] = dfours.size() - 1
 				get_node("digits/digit" + str(i)).texture = dfours[curr_digit[i]]
+				
 
 func _on_colorup_mouse_entered(i):
 	colorup = get_node("c" + str(i) + "/up")

@@ -1,1 +1,9 @@
 res://scenes/ButtonNext.tscn
+res://scenes/Main.tscn
+res://scenes/A3.tscn
+res://scenes/Widerstand.tscn
+res://scripts/Widerstand.gd
+res://scenes/A17.tscn
+res://scenes/A16.tscn
+res://scripts/animations.gd
+res://scenes/task2.gd

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cuqbwmgdnlkib"]
 
 [ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="1"]
-[ext_resource type="Script" path="res://scripts/ButtonNext.gd" id="1_3a75c"]
+[ext_resource type="Script" path="res://scripts/Buttonnext.gd" id="1_4oxix"]
 [ext_resource type="FontFile" uid="uid://s6087bmqv6uy" path="res://fonts/Terminal-Grotesque-master/title.otf" id="2_3d31c"]
 
 [node name="ButtonNext" type="Node2D"]
 position = Vector2(511, 371)
 scale = Vector2(0.4, 0.4)
-script = ExtResource("1_3a75c")
+script = ExtResource("1_4oxix")
 
 [node name="ButtonSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1")
