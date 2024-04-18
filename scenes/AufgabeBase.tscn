@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://scripts/ButtonNext2.gd" id="15_c4v8r"]
 [ext_resource type="Texture2D" uid="uid://cah4vca5mxd1w" path="res://sprite/info.png" id="16_fucxd"]
 [ext_resource type="PackedScene" uid="uid://bpase6c7wmsbx" path="res://scenes/ButtonClose.tscn" id="16_px65t"]
-[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/alt/ButtonBack.tscn" id="18_ay36n"]
+[ext_resource type="PackedScene" uid="uid://c2ij3ofp8tbjf" path="res://scenes/ButtonBack.tscn" id="18_ay36n"]
 [ext_resource type="Texture2D" uid="uid://dveeswqio62ao" path="res://sprite/buttonstyle.png" id="19_j3lga"]
 [ext_resource type="FontFile" uid="uid://s6087bmqv6uy" path="res://fonts/Terminal-Grotesque-master/title.otf" id="21_bqan0"]
 
@@ -52,6 +52,7 @@ offset_top = 354.0
 offset_right = 338.0
 offset_bottom = 582.0
 scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
 texture = ExtResource("3_ldr52")
 
 [node name="label" type="Label" parent="frame0"]
@@ -73,6 +74,7 @@ offset_top = 347.0
 offset_right = 968.0
 offset_bottom = 577.0
 scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
 texture = ExtResource("14_cpgby")
 
 [node name="label" type="Label" parent="frame1"]
@@ -94,6 +96,7 @@ offset_top = 340.0
 offset_right = 1580.0
 offset_bottom = 576.0
 scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
 texture = ExtResource("16_fucxd")
 
 [node name="label" type="Label" parent="frame2"]
@@ -115,6 +118,7 @@ offset_left = 3.0
 offset_top = 1.0
 offset_right = 1910.0
 offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
 texture = ExtResource("5_efb8i")
 
 [node name="Label" type="Label" parent="task0"]
@@ -359,6 +363,7 @@ offset_left = 3.0
 offset_top = 1.0
 offset_right = 1910.0
 offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
 texture = ExtResource("5_efb8i")
 
 [node name="Label" type="Label" parent="task1"]
@@ -485,6 +490,7 @@ offset_left = 3.0
 offset_top = 1.0
 offset_right = 1910.0
 offset_bottom = 1078.0
+mouse_default_cursor_shape = 2
 texture = ExtResource("5_efb8i")
 
 [node name="Label" type="Label" parent="task2"]

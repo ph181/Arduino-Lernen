@@ -42,7 +42,7 @@ clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe0" type="Node2D" parent="."]
-position = Vector2(1500, 900)
+position = Vector2(1500, 954)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe0"]
 texture = ExtResource("5")
@@ -58,6 +58,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "18. Projektaufgabe"
@@ -67,7 +68,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe1" type="Node2D" parent="."]
-position = Vector2(410, 400)
+position = Vector2(410, 385)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe1"]
 texture = ExtResource("5")
@@ -83,6 +84,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "1. Allgemeines"
@@ -91,7 +93,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe2" type="Node2D" parent="."]
-position = Vector2(956, 400)
+position = Vector2(956, 385)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe2"]
 texture = ExtResource("5")
@@ -107,6 +109,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "2. Breadboard und Verbindungen"
@@ -116,7 +119,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe3" type="Node2D" parent="."]
-position = Vector2(1500, 400)
+position = Vector2(1500, 385)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe3"]
 texture = ExtResource("5")
@@ -132,6 +135,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "3. Widerstände"
@@ -157,6 +161,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "4. LEDs"
@@ -182,6 +187,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "5. Die Arduino IDE"
@@ -207,6 +213,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "6. Programme"
@@ -216,7 +223,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe7" type="Node2D" parent="."]
-position = Vector2(410, 600)
+position = Vector2(410, 614)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe7"]
 texture = ExtResource("5")
@@ -232,6 +239,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "7. Eigene Programme"
@@ -241,7 +249,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe8" type="Node2D" parent="."]
-position = Vector2(956, 600)
+position = Vector2(956, 614)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe8"]
 texture = ExtResource("5")
@@ -257,6 +265,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "8. Lautsprecher und 
@@ -267,7 +276,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe9" type="Node2D" parent="."]
-position = Vector2(1500, 600)
+position = Vector2(1500, 614)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe9"]
 texture = ExtResource("5")
@@ -283,6 +292,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "9. Variablen"
@@ -292,7 +302,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe10" type="Node2D" parent="."]
-position = Vector2(410, 700)
+position = Vector2(410, 727)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe10"]
 texture = ExtResource("5")
@@ -308,6 +318,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "10. Der serielle Monitor"
@@ -317,7 +328,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe11" type="Node2D" parent="."]
-position = Vector2(956, 700)
+position = Vector2(956, 727)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe11"]
 texture = ExtResource("5")
@@ -333,6 +344,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "11. for-Schleife"
@@ -342,7 +354,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe12" type="Node2D" parent="."]
-position = Vector2(1500, 700)
+position = Vector2(1500, 727)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe12"]
 texture = ExtResource("5")
@@ -358,6 +370,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "12. Dimmen"
@@ -367,7 +380,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe13" type="Node2D" parent="."]
-position = Vector2(410, 800)
+position = Vector2(410, 840)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe13"]
 texture = ExtResource("5")
@@ -383,6 +396,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "13. RGB LEDs"
@@ -392,7 +406,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe14" type="Node2D" parent="."]
-position = Vector2(956, 800)
+position = Vector2(956, 840)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe14"]
 texture = ExtResource("5")
@@ -408,6 +422,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "14. if Bedingung"
@@ -417,7 +432,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe15" type="Node2D" parent="."]
-position = Vector2(1500, 800)
+position = Vector2(1500, 840)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe15"]
 texture = ExtResource("5")
@@ -433,6 +448,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "15. Taster"
@@ -442,7 +458,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe16" type="Node2D" parent="."]
-position = Vector2(409, 907)
+position = Vector2(409, 954)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe16"]
 texture = ExtResource("5")
@@ -458,6 +474,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "16. Transistoren"
@@ -467,7 +484,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Aufgabe17" type="Node2D" parent="."]
-position = Vector2(952, 902)
+position = Vector2(952, 954)
 
 [node name="buttonBG" type="Sprite2D" parent="Aufgabe17"]
 texture = ExtResource("5")
@@ -483,6 +500,7 @@ offset_top = -40.0
 offset_right = -73.0
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "17. Relais
@@ -511,6 +529,7 @@ offset_top = -40.0
 offset_right = -19.753
 offset_bottom = -14.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_eqorf")
 theme_override_font_sizes/font_size = 38
 text = "Beenden"

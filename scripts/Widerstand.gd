@@ -30,10 +30,10 @@ func _ready():
 		dtwos.append(load("res://sprite/a3/" + str(i) + ".png"))
 		dthrees.append(load("res://sprite/a3/mul_" + str(i) + ".png"))
 
+	cfours.append(load("res://sprite/a3/tolcol0.png"))
 	cfours.append(load("res://sprite/a3/tolcol1.png"))
-	cfours.append(load("res://sprite/a3/tolcol2.png"))
+	dfours.append(load("res://sprite/a3/tol0.png"))
 	dfours.append(load("res://sprite/a3/tol1.png"))
-	dfours.append(load("res://sprite/a3/tol2.png"))
 	
 	for k in range(4):
 		colorSprite = get_node("colors/Sprite" + str(k))

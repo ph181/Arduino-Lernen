@@ -125,6 +125,7 @@ offset_left = -4.0
 offset_top = -11.0
 offset_right = -4.0
 offset_bottom = -11.0
+mouse_default_cursor_shape = 2
 
 [node name="up" type="TextureRect" parent="d0"]
 layout_mode = 0
@@ -149,6 +150,7 @@ offset_left = -4.0
 offset_top = -11.0
 offset_right = -4.0
 offset_bottom = -11.0
+mouse_default_cursor_shape = 2
 
 [node name="up" type="TextureRect" parent="d1"]
 layout_mode = 0
@@ -173,6 +175,7 @@ offset_left = -4.0
 offset_top = -11.0
 offset_right = -4.0
 offset_bottom = -11.0
+mouse_default_cursor_shape = 2
 
 [node name="up" type="TextureRect" parent="d2"]
 layout_mode = 0
@@ -197,6 +200,7 @@ offset_left = -4.0
 offset_top = -11.0
 offset_right = -4.0
 offset_bottom = -11.0
+mouse_default_cursor_shape = 2
 
 [node name="up" type="TextureRect" parent="d3"]
 layout_mode = 0

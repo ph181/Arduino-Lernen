@@ -20,14 +20,16 @@ func _on_Buttontext_gui_input(event,i):
 			aufgabe = get_node("Aufgabe" + str(i) + "/buttonBG/Buttontext")
 			scene = get_tree().change_scene_to_file("res://scenes/A" + str(i) + ".tscn")
 
+
 func _on_mouse_entered(i):
 	button = get_node("Aufgabe" + str(i) + "/buttonBG")
 	button.scale = Vector2(1.2,1.2)
 
+
 func _on_mouse_exited(i):
 	button = get_node("Aufgabe" + str(i) + "/buttonBG")
 	button.scale = Vector2(1, 1)
-	
+
 	
 
 

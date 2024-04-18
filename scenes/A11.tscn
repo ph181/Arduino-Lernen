@@ -14,7 +14,7 @@ text = "Ausprobieren!"
 [node name="Label2" parent="task0" index="1"]
 text = "Was würde diese Schleife machen?"
 
-[node name="Label3" type="Label" parent="task0" index="2"]
+[node name="Label4" type="Label" parent="task0" index="2"]
 layout_mode = 0
 offset_left = 139.0
 offset_top = 331.0
@@ -30,7 +30,7 @@ delay(60);
 }"
 autowrap_mode = 2
 
-[node name="Sprite" parent="task0" index="3"]
+[node name="Sprite" parent="task0" index="4"]
 visible = false
 
 [node name="Label" parent="task0/ButtonNext/task00" index="0"]
@@ -41,7 +41,7 @@ offset_top = 187.0
 offset_bottom = 349.0
 text = "Seit 2016 hat die deutsche Polizei eine sogenannte Yelp-Sirene mit einem auf- und abschwellenden Heulton. Programmeire so eine Sirene. Dazu brauchst du zwei for-Schleifen."
 
-[node name="Sprite" parent="task0/ButtonNext/task00" index="2"]
+[node name="Sprite" parent="task0/ButtonNext/task00" index="3"]
 visible = false
 
 [node name="Label" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="0"]
@@ -51,14 +51,8 @@ text = "Lauflicht"
 text = "Schließe fünf LEDs an die Pins 9 bis 13 an und programmeire ein Lauflicht. Erst blitzt die LED an Pin 9, dann die an 10, dann an 11 und so weiter.
 "
 
-[node name="Sprite" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="2"]
+[node name="Sprite" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="3"]
 visible = false
-
-[node name="task01" parent="task0/ButtonNext/task00/ButtonNext2/task00" index="5"]
-layout_mode = 0
-
-[node name="task01" parent="task0/ButtonNext/task00" index="6"]
-layout_mode = 0
 
 [node name="Label" parent="task1" index="0"]
 text = "Üben mit der for-Schleife"
@@ -66,16 +60,8 @@ text = "Üben mit der for-Schleife"
 [node name="Label2" parent="task1" index="1"]
 text = "Was macht das Beispielprogramm? Was ändert sich, wenn du im ersten Parameter n = 5 schreibst? Was verändert sich, wenn du dann als zweiten Parameter n<50 verwendest? Was geschieht, wenn der dritte Parameter n=n+1 ist?"
 
-[node name="Label3" type="Label" parent="task1" index="2"]
-layout_mode = 0
-offset_left = 655.0
-offset_top = 464.0
-offset_right = 1314.0
-offset_bottom = 896.0
-mouse_filter = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_txltu")
-theme_override_font_sizes/font_size = 50
+[node name="Label3" parent="task1" index="2"]
+visible = true
 text = "void setup(){
 Serial.begin(9600);
 for(int n=0; n<30; n=n+1){
@@ -84,7 +70,6 @@ Serial.println(n);
 }
 }
 void loop(){}"
-autowrap_mode = 2
 
 [node name="Sprite" parent="task1" index="3"]
 visible = false
@@ -99,5 +84,5 @@ Beispiel:
       for (int i = 1; i<10;i=i+1)
 Variable i wird angelegt und nur innerhalb der for-Schleife verwendet. Der Variable i wird der Wert 1 zugeordnet (Startwert). Die Variable i darf maximal 10 werden und wird immer um 1 vergrößert. Mit i=i-1 wird die Schleife rückwärts durchgeführt."
 
-[node name="Sprite" parent="task2" index="2"]
+[node name="Sprite" parent="task2" index="3"]
 visible = false

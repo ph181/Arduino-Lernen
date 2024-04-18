@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhykjgjijxeua"
-path="res://.godot/imported/tolcol0.png-97f2c5545f18629f61c5ec31a45969fc.ctex"
+uid="uid://dsaiih06g5ffh"
+path="res://.godot/imported/tolcol2.png-188e5c8c530ed8bdecb7433dfe7553bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/a3/tolcol0.png"
-dest_files=["res://.godot/imported/tolcol0.png-97f2c5545f18629f61c5ec31a45969fc.ctex"]
+source_file="res://sprite/a3/tolcol2.png"
+dest_files=["res://.godot/imported/tolcol2.png-188e5c8c530ed8bdecb7433dfe7553bf.ctex"]
 
 [params]
 
