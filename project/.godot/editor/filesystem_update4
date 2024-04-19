@@ -1,5 +1,1 @@
-res://scenes/Main.tscn
-res://scenes/A3.tscn
-res://scenes/Widerstand.tscn
-res://scenes/A17.tscn
-res://scenes/A16.tscn
+res://scripts/test.gd
