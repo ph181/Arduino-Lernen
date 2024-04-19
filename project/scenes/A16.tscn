@@ -412,7 +412,6 @@ void loop() {
 visible = false
 
 [node name="task2" parent="." index="8"]
-visible = true
 script = ExtResource("3_tdfus")
 
 [node name="Label" parent="task2" index="0"]
@@ -473,7 +472,9 @@ offset_bottom = 255.0
 mouse_default_cursor_shape = 2
 
 [node name="Label2" parent="task2" index="5"]
-text = "Bewege die Maus über die Videoclips, um sie abzuspielen."
+text = "Klicke auf die Videos, um sie abzuspielen oder zu stoppen."
 
 [node name="Sprite" parent="task2" index="7"]
 visible = false
+
+[connection signal="gui_input" from="task2" to="task2" method="_on_gui_input"]

@@ -5,15 +5,16 @@ var animation
 func _ready():
 	for i in range(4):
 		rect = get_node(str(i) + "/TextureRect")
-		rect.mouse_entered.connect(_on_texture_rect_mouse_entered.bind(i))
-		rect.mouse_exited.connect(_on_texture_rect_mouse_exited.bind(i))
+		rect.gui_input.connect(_on_gui_input_event.bind(i))
+#		rect.mouse_exited.connect(_on_texture_rect_mouse_exited.bind(i))
 
 
-func _on_texture_rect_mouse_entered(i):
-	animation = get_node(str(i))
-	animation.play()
+func _on_gui_input_event(event, i):
+	if event is InputEventMouseButton:
+		if event.is_pressed() and event.button_index == 1:
+			animation = get_node(str(i))
+			if animation.is_playing():
+				animation.stop()
+			else:
+				animation.play()
 
-
-func _on_texture_rect_mouse_exited(i):
-	animation = get_node(str(i))
-	animation.stop()

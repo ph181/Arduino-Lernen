@@ -539,6 +539,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Beenden" type="Node2D" parent="."]
+visible = false
 position = Vector2(1770, 86)
 script = ExtResource("6_s77bl")
 
