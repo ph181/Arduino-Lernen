@@ -1,6 +1,7 @@
+TextureRect
+Sprite2D
 LineEdit
 Label
 RichTextLabel
 Control
-TextureRect
 AnimatedSprite2D

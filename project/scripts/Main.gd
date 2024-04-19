@@ -7,7 +7,7 @@ var button
 var label
 
 func _ready():
-	for i in range(18):
+	for i in range(19):
 		aufgabe = get_node("Aufgabe" + str(i) + "/buttonBG/Buttontext")
 		aufgabe.gui_input.connect(_on_Buttontext_gui_input.bind(i))
 		label = get_node("Aufgabe" + str(i) + "/buttonBG/Buttontext")

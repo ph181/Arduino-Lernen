@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0vt6ulaeoa1f"]
+
+[ext_resource type="Script" path="res://scripts/test.gd" id="1_hr7nc"]
+[ext_resource type="Texture2D" uid="uid://bxr07m8ic0en4" path="res://sprite/buttonvocabulary.png" id="2_cb870"]
+[ext_resource type="FontFile" uid="uid://bpy323havmp2c" path="res://fonts/Terminal-Grotesque-master/font.ttf" id="3_46xfn"]
+[ext_resource type="Texture2D" uid="uid://cq45u3k5b8bpw" path="res://sprite/switchD.png" id="4_uwir2"]
+
+[node name="test" type="Node2D"]
+script = ExtResource("1_hr7nc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(963.5, 530.5)
+scale = Vector2(3, 3)
+texture = ExtResource("2_cb870")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 381.0
+offset_top = 392.0
+offset_right = 1552.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("3_46xfn")
+theme_override_font_sizes/font_size = 90
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AusgabeLabel" type="Label" parent="."]
+offset_left = 711.0
+offset_top = 873.0
+offset_right = 1862.0
+offset_bottom = 1062.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_46xfn")
+theme_override_font_sizes/font_size = 80
+text = "Test"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 359.0
+offset_top = 709.0
+offset_right = 1551.0
+offset_bottom = 854.0
+theme_override_fonts/font = ExtResource("3_46xfn")
+theme_override_font_sizes/font_size = 90
+placeholder_text = "Hier eingeben"
+
+[node name="SwitchD" type="TextureRect" parent="."]
+offset_left = 1589.0
+offset_top = 867.0
+offset_right = 1621.0
+offset_bottom = 892.0
+rotation = -1.5708
+scale = Vector2(5.14356, 4.23744)
+texture = ExtResource("4_uwir2")
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="gui_input" from="SwitchD" to="." method="_on_switch_d_gui_input"]
+[connection signal="mouse_entered" from="SwitchD" to="." method="_on_switch_d_mouse_entered"]
+[connection signal="mouse_exited" from="SwitchD" to="." method="_on_switch_d_mouse_exited"]

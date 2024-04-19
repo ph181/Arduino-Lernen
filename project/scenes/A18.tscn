@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c42ljugufdb4r"]
+
+[ext_resource type="PackedScene" uid="uid://05baa6d7gub5" path="res://scenes/AufgabeBase.tscn" id="1_u6qax"]
+[ext_resource type="PackedScene" uid="uid://d0vt6ulaeoa1f" path="res://scenes/test.tscn" id="2_tcdom"]
+
+[node name="A18" instance=ExtResource("1_u6qax")]
+
+[node name="label" parent="title" index="0"]
+text = "Vokabeltest"
+
+[node name="frame0" parent="." index="3"]
+visible = false
+
+[node name="frame1" parent="." index="4"]
+visible = false
+
+[node name="frame2" parent="." index="5"]
+visible = false
+
+[node name="test" parent="." index="9" instance=ExtResource("2_tcdom")]
+position = Vector2(-34, -39)
