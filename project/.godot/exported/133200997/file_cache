@@ -1,4 +1,4 @@
-res://scenes/A1.tscn::9407240f05cb21e1b0d88ebb708e83f3::1713462300::res://.godot/exported/133200997/export-8ff67fb8578250e7de5c013036aa562c-A1.scn
+res://scenes/A1.tscn::2289666fab8623939c89d8f9396438b2::1715067233::res://.godot/exported/133200997/export-8ff67fb8578250e7de5c013036aa562c-A1.scn
 res://scenes/A2.tscn::3e76946ca891e47020c15d40294a6393::1713462300::res://.godot/exported/133200997/export-f3b94527eda316889e72227ad23c167f-A2.scn
 res://scenes/A3.tscn::89f642fe0efa396d8160e6a9cd14c9b9::1713514849::res://.godot/exported/133200997/export-fda8158ca8fa43abf9e9c769056a5fd5-A3.scn
 res://scenes/A4.tscn::c0b43344c290e8e2ce8584101248812d::1713462300::res://.godot/exported/133200997/export-f107bb2d2bc5d8214c99a831fac81ee4-A4.scn
@@ -8,7 +8,7 @@ res://scenes/AufgabeBase.tscn::704e35af809d9da6a7ed8153f7f3a727::1713514850::res
 res://scenes/ButtonBack2.tscn::7f5a0bbe7584302baffea5839dd5e34f::1713462300::res://.godot/exported/133200997/export-e63a39b4bf31e4650bf8b861e8d0f56d-ButtonBack2.scn
 res://scenes/ButtonClose.tscn::13b4a9e0e914ba4383a891a5fc918084::1713462300::res://.godot/exported/133200997/export-c7e3aea441169c6ec9edbba2541b0a3e-ButtonClose.scn
 res://scenes/ButtonNext.tscn::717c79092067409ebf26234a7b704ef7::1713465848::res://.godot/exported/133200997/export-f6c26ac5529fa561ab192c40a4fc9ef6-ButtonNext.scn
-res://scenes/Main.tscn::c0b293cb53fefd8d815ea82eb6654d89::1713525809::res://.godot/exported/133200997/export-4a24720ee5e787dbe30abc634fa3679d-Main.scn
+res://scenes/Main.tscn::c0b293cb53fefd8d815ea82eb6654d89::1715067232::res://.godot/exported/133200997/export-4a24720ee5e787dbe30abc634fa3679d-Main.scn
 res://scenes/A7.tscn::2aa4012858c0e3606345cc6fa6458abc::1713462300::res://.godot/exported/133200997/export-5bb00aec7a44eff632469150b4e29901-A7.scn
 res://scenes/A8.tscn::ead52bb7c784d65ec589af4715504a3c::1713462300::res://.godot/exported/133200997/export-50107edf3356dad7bf77c748e40644ad-A8.scn
 res://scenes/A9.tscn::0eed0ec612ba10057964cd177b032021::1713462300::res://.godot/exported/133200997/export-fde6300f6390e758bc395c1fb9fc606d-A9.scn
@@ -18,11 +18,11 @@ res://scenes/A12.tscn::0e38020fb2023363c8d35546c51d71ab::1713462300::res://.godo
 res://scenes/A13.tscn::2646b5cb6b8b5f5d86a197235d778702::1713462300::res://.godot/exported/133200997/export-bbfb5ba784d8041f448059c3119e79dd-A13.scn
 res://scenes/A14.tscn::e1aa5993552f38da549454e64ae1d945::1713462300::res://.godot/exported/133200997/export-348df2eb0ac4f3e66e71e7494a2e167d-A14.scn
 res://scenes/A15.tscn::32eadbb6a11fb0af5332e1ecd8993207::1713462300::res://.godot/exported/133200997/export-0620c2bcd6b8cbab0ba5fb0b4fd850ce-A15.scn
-res://scenes/A16.tscn::3ca957918e50b12754e300e7c91bd74d::1713525876::res://.godot/exported/133200997/export-adeecb4d04b6b6860b9963369d201309-A16.scn
-res://scenes/A17.tscn::0aa7bc1bde3207a94672cbb5c3efa28e::1713514849::res://.godot/exported/133200997/export-cb01641bfea36cd73c259aa2688a097d-A17.scn
+res://scenes/A16.tscn::3ca957918e50b12754e300e7c91bd74d::1715067232::res://.godot/exported/133200997/export-adeecb4d04b6b6860b9963369d201309-A16.scn
+res://scenes/A17.tscn::0aa7bc1bde3207a94672cbb5c3efa28e::1715067232::res://.godot/exported/133200997/export-cb01641bfea36cd73c259aa2688a097d-A17.scn
 res://scenes/Widerstand.tscn::cd1f8c316b8c09d4b6eab1954492f85e::1713514849::res://.godot/exported/133200997/export-9d3b02130355f609aee0114057f0f20c-Widerstand.scn
 res://scenes/Zuordnungsaufgabe.tscn::9540d6d21a46154a58facdb166f0c1bf::1713462300::res://.godot/exported/133200997/export-f4f0824de539fc4d86e30090f2a3b10a-Zuordnungsaufgabe.scn
 res://scenes/ButtonBack.tscn::fc4d4879868ef0c0482d4e1f2901b15e::1713462300::res://.godot/exported/133200997/export-6c9d87ff7ea7f517c6dcd9eb4ab08e08-ButtonBack.scn
-res://scenes/A0.tscn::de96d263b7870cc40d7eff9f18528d8f::1713462300::res://.godot/exported/133200997/export-ac9dfbac1f2fe9f5dc45085cbfefcfd5-A0.scn
+res://scenes/A0.tscn::3dd13c6bdbcaf303674294cfe2bba019::1715067232::res://.godot/exported/133200997/export-ac9dfbac1f2fe9f5dc45085cbfefcfd5-A0.scn
 res://scenes/test.tscn::281861625d3c2841c84a3fddf7e7f891::1713893722::res://.godot/exported/133200997/export-a8ffa8455ee75708b6c34cd8d7888dc7-test.scn
-res://scenes/A18.tscn::48cab61e83a425293261b1a59e394f69::1713514850::res://.godot/exported/133200997/export-d1add6ffb1c865e33a25a0042341a025-A18.scn
+res://scenes/A18.tscn::48cab61e83a425293261b1a59e394f69::1715067232::res://.godot/exported/133200997/export-d1add6ffb1c865e33a25a0042341a025-A18.scn

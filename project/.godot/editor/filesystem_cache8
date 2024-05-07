@@ -1,6 +1,6 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1714677954
-export_presets.cfg::TextFile::-1::1713553607::0::1::::<><>::
+::res://::1715067157
+export_presets.cfg::TextFile::-1::1715065743::0::1::::<><>::
 icon.png::CompressedTexture2D::268073120360860005::1713462300::1713462300::1::::<><>::
 ::res://fonts/::1713462300
 ::res://fonts/Terminal-Grotesque-master/::1713513587
@@ -55,7 +55,7 @@ ButtonClose.tscn::PackedScene::3440355020106291521::1713462300::0::1::::<><>::ui
 ButtonNext.tscn::PackedScene::6209748928373631425::1713465848::0::1::::<><>::uid://dveeswqio62ao
 Main.tscn::PackedScene::5116349183901397585::1713525809::0::1::::<><>::uid://8wfqmhgahh2a::::res://sprite/BG.png<>res://scripts/Main.gd<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://s6087bmqv6uy::::res://fonts/Terminal-Grotesque-master/title.otf<>uid://dveeswqio62ao::::res://sprite/buttonstyle.png<>res://scripts/Beenden.gd<>uid://yl7mbw28nays::::res://sprite/beenden.png
 task2.gd::GDScript::-1::1713525809::0::1::::<>TextureRect<>::
-test.tscn::PackedScene::8958545124804730601::1713893722::0::1::::<><>::res://scripts/test.gd<>uid://bxr07m8ic0en4::::res://sprite/buttonvocabulary.png<>uid://bpy323havmp2c::::res://fonts/Terminal-Grotesque-master/font.ttf<>uid://cq45u3k5b8bpw::::res://sprite/switchD.png
+test.tscn::PackedScene::8958545124804730601::1713893722::0::1::::<><>::res://scripts/test.gd<>uid://bxr07m8ic0en4
 Widerstand.tscn::PackedScene::2773490550518371102::1713514849::0::1::::<><>::res://scripts/Widerstand.gd<>uid://dtwcdc1go7d7i
 Zuordnungsaufgabe.tscn::PackedScene::6682387185446131325::1713462300::0::1::::<><>::res://scripts/Zuordnungsaufgabe.gd<>uid://ciu3u0mixwc80
 ::res://scripts/::1713553594
